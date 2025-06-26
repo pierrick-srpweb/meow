@@ -1,0 +1,153 @@
+$flaticon_mycollection-font: "flaticon_mycollection";
+
+@font-face {
+    font-family: $flaticon_mycollection-font;
+    src: url("flaticon_mycollection.ttf?115178bff14f6003e76511f7474ceabe") format("truetype"),
+url("flaticon_mycollection.woff?115178bff14f6003e76511f7474ceabe") format("woff"),
+url("flaticon_mycollection.woff2?115178bff14f6003e76511f7474ceabe") format("woff2"),
+url("flaticon_mycollection.eot?115178bff14f6003e76511f7474ceabe#iefix") format("embedded-opentype"),
+url("flaticon_mycollection.svg?115178bff14f6003e76511f7474ceabe#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mycollection-map: (
+    "share": "\f101",
+    "verify": "\f102",
+    "cross": "\f103",
+    "flask": "\f104",
+    "add-friend": "\f105",
+    "mortarboard": "\f106",
+    "delete": "\f107",
+    "linkedin": "\f108",
+    "next": "\f109",
+    "tick": "\f10a",
+    "down-arrow": "\f10b",
+    "calendar": "\f10c",
+    "left-arrow": "\f10d",
+    "email": "\f10e",
+    "renew": "\f10f",
+    "send": "\f110",
+    "dots-menu": "\f111",
+    "plus": "\f112",
+    "arrow-right": "\f113",
+    "instagram": "\f114",
+    "comment": "\f115",
+    "twitter": "\f116",
+    "checked": "\f117",
+    "mouse": "\f118",
+    "phone-call": "\f119",
+    "bin": "\f11a",
+    "maps-and-flags": "\f11b",
+    "down-filled-triangular-arrow": "\f11c",
+    "left-quote": "\f11d",
+    "minus": "\f11e",
+    "right-quotes-symbol": "\f11f",
+    "facebook-app-symbol": "\f120",
+);
+
+.flaticon-share:before {
+    content: map-get($flaticon_mycollection-map, "share");
+}
+.flaticon-verify:before {
+    content: map-get($flaticon_mycollection-map, "verify");
+}
+.flaticon-cross:before {
+    content: map-get($flaticon_mycollection-map, "cross");
+}
+.flaticon-flask:before {
+    content: map-get($flaticon_mycollection-map, "flask");
+}
+.flaticon-add-friend:before {
+    content: map-get($flaticon_mycollection-map, "add-friend");
+}
+.flaticon-mortarboard:before {
+    content: map-get($flaticon_mycollection-map, "mortarboard");
+}
+.flaticon-delete:before {
+    content: map-get($flaticon_mycollection-map, "delete");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon_mycollection-map, "linkedin");
+}
+.flaticon-next:before {
+    content: map-get($flaticon_mycollection-map, "next");
+}
+.flaticon-tick:before {
+    content: map-get($flaticon_mycollection-map, "tick");
+}
+.flaticon-down-arrow:before {
+    content: map-get($flaticon_mycollection-map, "down-arrow");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon_mycollection-map, "calendar");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon_mycollection-map, "left-arrow");
+}
+.flaticon-email:before {
+    content: map-get($flaticon_mycollection-map, "email");
+}
+.flaticon-renew:before {
+    content: map-get($flaticon_mycollection-map, "renew");
+}
+.flaticon-send:before {
+    content: map-get($flaticon_mycollection-map, "send");
+}
+.flaticon-dots-menu:before {
+    content: map-get($flaticon_mycollection-map, "dots-menu");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon_mycollection-map, "plus");
+}
+.flaticon-arrow-right:before {
+    content: map-get($flaticon_mycollection-map, "arrow-right");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon_mycollection-map, "instagram");
+}
+.flaticon-comment:before {
+    content: map-get($flaticon_mycollection-map, "comment");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon_mycollection-map, "twitter");
+}
+.flaticon-checked:before {
+    content: map-get($flaticon_mycollection-map, "checked");
+}
+.flaticon-mouse:before {
+    content: map-get($flaticon_mycollection-map, "mouse");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon_mycollection-map, "phone-call");
+}
+.flaticon-bin:before {
+    content: map-get($flaticon_mycollection-map, "bin");
+}
+.flaticon-maps-and-flags:before {
+    content: map-get($flaticon_mycollection-map, "maps-and-flags");
+}
+.flaticon-down-filled-triangular-arrow:before {
+    content: map-get($flaticon_mycollection-map, "down-filled-triangular-arrow");
+}
+.flaticon-left-quote:before {
+    content: map-get($flaticon_mycollection-map, "left-quote");
+}
+.flaticon-minus:before {
+    content: map-get($flaticon_mycollection-map, "minus");
+}
+.flaticon-right-quotes-symbol:before {
+    content: map-get($flaticon_mycollection-map, "right-quotes-symbol");
+}
+.flaticon-facebook-app-symbol:before {
+    content: map-get($flaticon_mycollection-map, "facebook-app-symbol");
+}

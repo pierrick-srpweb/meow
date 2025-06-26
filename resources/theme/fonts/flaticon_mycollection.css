@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "flaticon_mycollection";
+  src: url("./flaticon_mycollection.ttf?115178bff14f6003e76511f7474ceabe") format("truetype"), url("./flaticon_mycollection.woff?115178bff14f6003e76511f7474ceabe") format("woff"), url("./flaticon_mycollection.woff2?115178bff14f6003e76511f7474ceabe") format("woff2"), url("./flaticon_mycollection.eot?115178bff14f6003e76511f7474ceabe#iefix") format("embedded-opentype"), url("./flaticon_mycollection.svg?115178bff14f6003e76511f7474ceabe#flaticon_mycollection") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon_mycollection !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-share:before {
+  content: "\f101";
+}
+
+.flaticon-verify:before {
+  content: "\f102";
+}
+
+.flaticon-cross:before {
+  content: "\f103";
+}
+
+.flaticon-flask:before {
+  content: "\f104";
+}
+
+.flaticon-add-friend:before {
+  content: "\f105";
+}
+
+.flaticon-mortarboard:before {
+  content: "\f106";
+}
+
+.flaticon-delete:before {
+  content: "\f107";
+}
+
+.flaticon-linkedin:before {
+  content: "\f108";
+}
+
+.flaticon-next:before {
+  content: "\f109";
+}
+
+.flaticon-tick:before {
+  content: "\f10a";
+}
+
+.flaticon-down-arrow:before {
+  content: "\f10b";
+}
+
+.flaticon-calendar:before {
+  content: "\f10c";
+}
+
+.flaticon-left-arrow:before {
+  content: "\f10d";
+}
+
+.flaticon-email:before {
+  content: "\f10e";
+}
+
+.flaticon-renew:before {
+  content: "\f10f";
+}
+
+.flaticon-send:before {
+  content: "\f110";
+}
+
+.flaticon-dots-menu:before {
+  content: "\f111";
+}
+
+.flaticon-plus:before {
+  content: "\f112";
+}
+
+.flaticon-arrow-right:before {
+  content: "\f113";
+}
+
+.flaticon-instagram:before {
+  content: "\f114";
+}
+
+.flaticon-comment:before {
+  content: "\f115";
+}
+
+.flaticon-twitter:before {
+  content: "\f116";
+}
+
+.flaticon-checked:before {
+  content: "\f117";
+}
+
+.flaticon-mouse:before {
+  content: "\f118";
+}
+
+.flaticon-phone-call:before {
+  content: "\f119";
+}
+
+.flaticon-bin:before {
+  content: "\f11a";
+}
+
+.flaticon-maps-and-flags:before {
+  content: "\f11b";
+}
+
+.flaticon-down-filled-triangular-arrow:before {
+  content: "\f11c";
+}
+
+.flaticon-left-quote:before {
+  content: "\f11d";
+}
+
+.flaticon-minus:before {
+  content: "\f11e";
+}
+
+.flaticon-right-quotes-symbol:before {
+  content: "\f11f";
+}
+
+.flaticon-facebook-app-symbol:before {
+  content: "\f120";
+}/*# sourceMappingURL=flaticon_mycollection.css.map */

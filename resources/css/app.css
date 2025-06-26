@@ -1,11 +1,8 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
+@import '../theme/css/bootstrap.min.css';
+@import '../theme/fonts/remixicon.css';
+@import '../theme/css/swiper-bundle.min.css';
+@import '../theme/fonts/flaticon_mycollection.css';
+@import '../theme/css/scrollCue.css';
+@import '../theme/css/navbar.css';
+@import '../theme/css/style.css';
+@import '../theme/css/responsive.css';
