@@ -275,10 +275,10 @@
     display: none;
   }
   .copy-right-warp {
+      width: 100%;
     padding-top: 35px;
     padding-bottom: 30px;
-    background: rgba(255, 255, 255, 0.0784313725);
-    background-image: none;
+      background-color: #ffd4c2;
   }
   .copy-right-warp p a {
     font-size: 14px;

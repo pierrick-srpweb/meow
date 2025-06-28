@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-lg top-navbar" id="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ route('home') }}" wire:navigate>
             <img src="{{ asset('build/images/logo.svg') }}" class="navbar-logo" alt="logo">
         </a>
         <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
-                    <span class="burger-menu">
-                        <span class="top-bar"></span>
-                        <span class="middle-bar"></span>
-                        <span class="bottom-bar"></span>
-                    </span>
+            <span class="burger-menu">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </span>
         </a>
 
         <div class="collapse navbar-collapse">
@@ -40,7 +40,7 @@
             <div class="others-option d-flex align-items-center">
 
                 <div class="option-item">
-                    <a href="{{ route('adopter') }}" class="default-btn style2">
+                    <a href="{{ route('adopter') }}" class="default-btn style2" wire:navigate>
                         <span>Adopter un chat</span>
                         <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
                     </a>

@@ -91,7 +91,7 @@
                             <img src="{{ asset('build/images/svgs/creativity1.svg') }}"  alt="img">
                         </div>
                         <h3>
-                            <a href="service-details.html">Faire un don</a>
+                            <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener">Faire un don</a>
                         </h3>
                         <p>Ponctuel ou régulier, votre don nous aide à accueillir et soigner toujours plus de chats dans le besoin</p>
                     </div>
@@ -104,7 +104,7 @@
                             <img src="{{ asset('build/images/svgs/creativity2.svg') }}"  alt="img">
                         </div>
                         <h3>
-                            <a href="service-details.html">Adopter</a>
+                            <a href="{{ route('adopter') }}" wire:navigate>Adopter</a>
                         </h3>
                         <p>En maison ou en appartement, que vous cherchiez un chaton ou un adulte, l'un de nos chats sera fait pour vous !</p>
                     </div>
@@ -115,7 +115,7 @@
                             <img src="{{ asset('build/images/svgs/creativity3.svg') }}"  alt="img">
                         </div>
                         <h3>
-                            <a href="service-details.html">Relayer nos actions</a>
+                            <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener">Relayer nos actions</a>
                         </h3>
                         <p>Via nos réseaux et autour de vous, abonnez-vous et partagez sans modération !</p>
                     </div>
@@ -128,7 +128,7 @@
                             <img src="{{ asset('build/images/svgs/creativity4.svg') }}"  alt="img">
                         </div>
                         <h3>
-                            <a href="service-details.html">Devenir famille d'accueil</a>
+                            <a href="{{ route('famille-accueil') }}" wire:navigate>Devenir famille d'accueil</a>
                         </h3>
                         <p>Accompagné par l'association aidez nous à sortir un ou plusieurs chats de la misère</p>
                     </div>

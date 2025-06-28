@@ -1,6 +1,6 @@
 <div class="responsive-navbar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
     <div class="offcanvas-header">
-        <a href="index.html" class="logo d-inline-block">
+        <a href="{{ route('home') }}" class="logo d-inline-block" wire:navigate>
             <img src="{{ asset('build/images/logo.svg') }}" alt="logo">
         </a>
         <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -10,35 +10,35 @@
     <div class="offcanvas-body">
         <div class="accordion" id="navbarAccordion">
             <div class="accordion-item">
-                <a class="accordion-button without-icon" href="{{ route('home') }}">
+                <a class="accordion-button without-icon" href="{{ route('home') }}" wire:navigate>
                     Accueil
                 </a>
             </div>
             <div class="accordion-item">
-                <a class="accordion-button without-icon" href="{{ route('liste-chats') }}">
+                <a class="accordion-button without-icon" href="{{ route('liste-chats') }}" wire:navigate>
                     Les chats et chatons à adopter
                 </a>
             </div>
             <div class="accordion-item">
-                <a class="accordion-button without-icon" href="{{ route('adopter') }}">
+                <a class="accordion-button without-icon" href="{{ route('adopter') }}" wire:navigate>
                     Comment adopter ?
                 </a>
             </div>
             <div class="accordion-item">
-                <a class="accordion-button without-icon" href="{{ route('contact') }}">
+                <a class="accordion-button without-icon" href="{{ route('contact') }}" wire:navigate>
                     Nous contacter
                 </a>
             </div>
         </div>
-        <div class="others-option d-flex align-items-center">
+        {{--<div class="others-option d-flex align-items-center">
 
             <div class="option-item">
-                <a href="{{ route('adopter') }}" class="default-btn style1"> Adopter un chat
+                <a href="{{ route('adopter') }}" class="default-btn style1" wire:navigate> Adopter un chat
                     <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
                 </a>
             </div>
 
-            <div class="option-item">
+            --}}{{--<div class="option-item">
                 <div class="search-bar">
                     <div class="modal-search">
                         <button class="open-button" onclick="openSearch()">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--}}{{--
 
             <div class="option-item">
                 <button class="btn side-bar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
@@ -64,6 +64,6 @@
                 </button>
             </div>
 
-        </div>
+        </div>--}}
     </div>
 </div>

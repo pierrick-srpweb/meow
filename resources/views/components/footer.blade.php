@@ -1,4 +1,4 @@
-<div class="">
+<div class="footer mt-5">
     <div class="copy-right-warp">
         <div class="container">
             <div class="inner-copyright-warp">

@@ -3,7 +3,7 @@
     <div class="inner-hero-warp">
         <div class="container">
             <div class="inner-hero-content">
-                <h1>Procédure d'adoption</h1>
+                <h1>Devenir Famille d'accueil</h1>
             </div>
         </div>
     </div>

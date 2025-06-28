@@ -21,21 +21,21 @@
                             <ul class="icon-info">
                                 <li>
                                     <i class="fi fi-sr-marker"></i>
-                                    <span>4 rue platanes <br> 17220 Saint-Rogatien</span>
+                                    <span>{{ $info_asso->adresse }} <br> {{ $info_asso->code_postal }} {{ $info_asso->ville }}</span>
                                 </li>
                                 <li>
                                     <i class="fi fi-sr-phone-call"></i>
-                                    <a href="tel:+33627560282">+33627560282</a>
+                                    <a href="tel:{{ $info_asso->telephone }}">{{ $info_asso->telephone }}</a>
                                 </li>
                                 <li>
                                     <i class="fi fi-sr-envelope"></i>
-                                    <a href="mailto:assomeowandco@gmail.com">assomeowandco@gmail.com</a>
+                                    <a href="mailto:{{ $info_asso->email }}">{{ $info_asso->email }}</a>
                                 </li>
                             </ul>
 
                             <ul class="social-list">
                                 <li>
-                                    <a href="https://www.facebook.com/association.meow.and.co/" id="my-element1" class="icon bg1">
+                                    <a href="{{ $info_asso->facebook }}" id="my-element1" class="icon bg1">
                                         <i class="flaticon-facebook-app-symbol"></i>
                                     </a>
                                 </li>

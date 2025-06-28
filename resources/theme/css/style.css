@@ -31,6 +31,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 @import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
 @import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+
+html {
+    height: 100%
+}
+
 body {
   font-family: "Mulish", sans-serif;
   font-size: 16px;
@@ -38,6 +43,7 @@ body {
   padding: 0;
   margin: 0;
   color: #777777;
+    min-height: 100dvh;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -204,7 +210,7 @@ Button Bg Color Container Warp Style
 }
 
 .default-btn {
-  background-color: #FF6666;
+  background-color: #F98D1F;
   border: solid 1px transparent;
   display: inline-block;
   text-align: center;
@@ -240,17 +246,17 @@ Button Bg Color Container Warp Style
 }
 .default-btn:hover {
   color: #ffffff;
-  background-color: #FF6666;
+  background-color: #FFE3A5;
 }
 .default-btn:hover::before {
   width: 100%;
-  border-color: #FF6666;
-  background-color: #000000;
+  border-color: #F98D1F;
+  background-color: #FFE3A5;
 }
 .default-btn:hover::after {
   width: 100%;
-  border-color: #FF6666;
-  background-color: #000000;
+  border-color: #F98D1F;
+  background-color: #FFE3A5;
 }
 .default-btn::before {
   content: "";
@@ -260,7 +266,7 @@ Button Bg Color Container Warp Style
   left: 0;
   height: 100%;
   width: 55%;
-  border: solid 1px #FF6666;
+  border: solid 1px #F98D1F;
   z-index: -1;
   transition: all ease 0.5s;
 }
@@ -272,7 +278,7 @@ Button Bg Color Container Warp Style
   right: 0;
   height: 100%;
   width: 50%;
-  border: solid 1px #FF6666;
+  border: solid 1px #F98D1F;
   z-index: -1;
   transition: all ease 0.5s;
 }
@@ -2171,12 +2177,13 @@ Footer Warp Style
 
 .copy-right-warp {
   text-align: center;
-  padding-top: 55px;
-  padding-bottom: 35px;
-  background-image: url(../images/heros/copy-right.png);
-  background-position: center center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #FFD4C2;
+  /*background-image: url(../images/heros/copy-right.png);*/
+  /*background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 .copy-right-warp p {
   font-weight: 500;
@@ -3372,7 +3379,7 @@ Blog Style2  Warp Style
 Hero Style3  Warp Style
 =======================================================*/
 .hero-style3-warp {
-  background-image: url(../images/heros/hero4.png);
+  background-image: url(../images/heros/hero-meow.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3488,19 +3495,19 @@ Hero Style3  Warp Style
   margin-bottom: 10px;
 }
 .hero-style3-content p {
-  color: #EEEEEE;
+  color: #777;
   margin-bottom: 20px;
   font-size: 18px;
 }
 .hero-style3-content .default-btn {
   margin-top: 10px;
-  background-color: #B250FE;
+  background-color: #F98D1F;
 }
 .hero-style3-content .default-btn::after {
-  border-color: #B250FE;
+  border-color: #F98D1F;
 }
 .hero-style3-content .default-btn::before {
-  border-color: #B250FE;
+  border-color: #F98D1F;
 }
 
 /*
