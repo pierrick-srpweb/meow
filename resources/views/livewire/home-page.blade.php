@@ -1,18 +1,18 @@
 <main>
     <!-- Hero Style3 Warp Start -->
     <div class="hero-style3-warp">
-        <div class="container-fluid">
-            <div class="hero-style3-content">
-            <span class="title">
-                Association loi 1901
-            </span>
+        <div class="container-fluid d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+            <div class="hero-style3-content me-0 me-md-3">
+                <span class="title">
+                    Association loi 1901
+                </span>
                 <h1>Bienvenue chez <br>Meow and Co</h1>
                 <p>Notre association recueille, soigne et fait adopter des chats trouvés ou abandonnés pour leur offrir une seconde chance. Nous agissons dans les départements de Vendée (85), Charentes-Maritime (17) et Deux-Sèvres (79)<br><br>Rejoignez-nous pour changer leurs vies !</p>
                 <a href="about.html" class="default-btn style2">Découvrir les chats à adopter
                     <img src="{{ asset('build/images/svgs/button-white.svg') }}"  alt="">
                 </a>
             </div>
-            <img src="{{ asset('build/images/heros/hero5.png') }}" class="hero-style3-main" alt="image">
+            <img src="{{ asset('build/images/meow/logo-carre.png') }}" class="hero-style3-main d-none d-md-block" alt="image">
         </div>
     </div>
     <!-- Hero Style3 Warp End -->

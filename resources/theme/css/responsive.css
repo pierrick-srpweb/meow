@@ -869,9 +869,8 @@
     font-size: 15px;
   }
   .hero-style3-warp .hero-style3-main {
-    position: relative;
-    bottom: 0;
-    right: auto;
+      width:40%;
+      height:40%;
   }
   .hero-style3-warp .scroll-btn {
     display: none;
@@ -2044,10 +2043,8 @@
     margin-right: auto;
   }
   .hero-style3-warp .hero-style3-main {
-    position: absolute;
-    bottom: 0px;
-    right: 10%;
-    width: 400px;
+      width:40%;
+      height:40%;
   }
   .hero-style3-warp .hs-shape5 {
     display: none;
@@ -2558,10 +2555,10 @@
   .testimonial-style2-slider-warp .tst-warp {
     width: 170px;
   }
-  .hero-style3-warp .hero-style3-main {
+  /*.hero-style3-warp .hero-style3-main {
     right: 6%;
     width: 500px;
-  }
+  }*/
   .hero-style3-warp .hs-shape1 {
     display: none;
   }
@@ -2753,7 +2750,7 @@
   .panda-registration .panda {
     right: 8%;
   }
-  .hero-style3-warp .hero-style3-main {
+  /*.hero-style3-warp .hero-style3-main {
     width: 525px;
-  }
+  }*/
 }/*# sourceMappingURL=responsive.css.map */

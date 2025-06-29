@@ -3379,7 +3379,7 @@ Blog Style2  Warp Style
 Hero Style3  Warp Style
 =======================================================*/
 .hero-style3-warp {
-  background-image: url(../images/heros/hero-meow.png);
+  background-image: url(../images/meow/hero-meow.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3387,9 +3387,8 @@ Hero Style3  Warp Style
   z-index: 1;
 }
 .hero-style3-warp .hero-style3-main {
-  position: absolute;
-  bottom: 0px;
-  right: 10%;
+  width: 40%;
+    height: 40%;
 }
 .hero-style3-warp .banner-shape-40 {
   position: absolute;
