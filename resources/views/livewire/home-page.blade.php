@@ -26,15 +26,15 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="image">
-                                    <img src="{{ asset('build/images/abouts/style3-about1.png') }}" alt="image">
+                                    <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="image">
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="image style3-about2">
-                                    <img src="{{ asset('build/images/abouts/style3-about2.png') }}" alt="image">
+                                    <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="image">
                                 </div>
                                 <div class="image">
-                                    <img src="{{ asset('build/images/abouts/style3-about3.png') }}" alt="image">
+                                    <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="image">
                                 </div>
                             </div>
                         </div>
@@ -87,8 +87,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-sm-6">
                     <div class="creativity-card">
-                        <div class="icon">
-                            <img src="{{ asset('build/images/svgs/creativity1.svg') }}"  alt="img">
+                        <div class="icon d-flex">
+                            {{ svg('heroicon-s-currency-euro') }}
                         </div>
                         <h3>
                             <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener">Faire un don</a>
@@ -100,8 +100,8 @@
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="creativity-card">
-                        <div class="icon">
-                            <img src="{{ asset('build/images/svgs/creativity2.svg') }}"  alt="img">
+                        <div class="icon d-flex">
+                            {{ svg('heroicon-s-heart') }}
                         </div>
                         <h3>
                             <a href="{{ route('adopter') }}" wire:navigate>Adopter</a>
@@ -111,8 +111,8 @@
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="creativity-card">
-                        <div class="icon">
-                            <img src="{{ asset('build/images/svgs/creativity3.svg') }}"  alt="img">
+                        <div class="icon d-flex">
+                            {{ svg('heroicon-s-share') }}
                         </div>
                         <h3>
                             <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener">Relayer nos actions</a>
@@ -124,8 +124,8 @@
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="creativity-card">
-                        <div class="icon">
-                            <img src="{{ asset('build/images/svgs/creativity4.svg') }}"  alt="img">
+                        <div class="icon d-flex">
+                            {{ svg('heroicon-s-building-office') }}
                         </div>
                         <h3>
                             <a href="{{ route('famille-accueil') }}" wire:navigate>Devenir famille d'accueil</a>

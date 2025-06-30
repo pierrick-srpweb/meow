@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg top-navbar" id="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('home') }}" wire:navigate>
-            <img src="{{ asset('build/images/logo.svg') }}" class="navbar-logo" alt="logo">
+        <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}" wire:navigate>
+            <img src="{{ asset('build/images/meow/meow.png') }}" class="navbar-logo" alt="logo" width="100px">
+            <span class="meow-logo">Association <br> Meow and Co</span>
         </a>
         <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
             <span class="burger-menu">

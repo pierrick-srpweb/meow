@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Pacifico&display=swap" rel="stylesheet">
+
     <!-- Links Of CSS File -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -24,7 +28,7 @@
     <!-- Scroll Top Btn -->
     <div class="top-button-icon">
         <button id="scrollTopBtn">
-            <i class="ri-arrow-up-circle-fill"></i>
+            {{--<i class="ri-arrow-up-circle-fill"></i>--}}
         </button>
     </div>
     <!-- Scroll Top Btn -->
