@@ -143,7 +143,7 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('build/images/abouts/creativity1.png') }}" class="creativity1" alt="image">
+        <img src="{{ asset('build/images/meow/don.jpg') }}" class="creativity1" alt="image" width="600px">
         {{--<div class="all-shapes">
             <img src="{{ asset('build/images/shapes/creativity-shape1.png') }}" class="creativity-shape1" alt="image">
             <img src="{{ asset('build/images/shapes/creativity-shape2.png') }}" class="creativity-shape2" alt="image">
