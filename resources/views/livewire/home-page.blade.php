@@ -86,52 +86,60 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-sm-6">
-                    <div class="creativity-card">
-                        <div class="icon d-flex">
-                            {{ svg('heroicon-s-currency-euro') }}
+                    <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener">
+                        <div class="creativity-card">
+                            <div class="icon d-flex">
+                                {{ svg('heroicon-s-currency-euro') }}
+                            </div>
+                            <h3>
+                                Faire un don
+                            </h3>
+                            <p>Ponctuel ou régulier, votre don nous aide à accueillir et soigner toujours plus de chats dans le besoin</p>
                         </div>
-                        <h3>
-                            <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener">Faire un don</a>
-                        </h3>
-                        <p>Ponctuel ou régulier, votre don nous aide à accueillir et soigner toujours plus de chats dans le besoin</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="creativity-card">
-                        <div class="icon d-flex">
-                            {{ svg('heroicon-s-heart') }}
+                    <a href="{{ route('adopter') }}" wire:navigate>
+                        <div class="creativity-card">
+                            <div class="icon d-flex">
+                                {{ svg('heroicon-s-heart') }}
+                            </div>
+                            <h3>
+                                Adopter
+                            </h3>
+                            <p>En maison ou en appartement, que vous cherchiez un chaton ou un adulte, l'un de nos chats sera fait pour vous !</p>
                         </div>
-                        <h3>
-                            <a href="{{ route('adopter') }}" wire:navigate>Adopter</a>
-                        </h3>
-                        <p>En maison ou en appartement, que vous cherchiez un chaton ou un adulte, l'un de nos chats sera fait pour vous !</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="creativity-card">
-                        <div class="icon d-flex">
-                            {{ svg('heroicon-s-share') }}
+                    <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener">
+                        <div class="creativity-card">
+                            <div class="icon d-flex">
+                                {{ svg('heroicon-s-share') }}
+                            </div>
+                            <h3>
+                                Relayer nos actions
+                            </h3>
+                            <p>Via nos réseaux et autour de vous, abonnez-vous et partagez sans modération !</p>
                         </div>
-                        <h3>
-                            <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener">Relayer nos actions</a>
-                        </h3>
-                        <p>Via nos réseaux et autour de vous, abonnez-vous et partagez sans modération !</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="creativity-card">
-                        <div class="icon d-flex">
-                            {{ svg('heroicon-s-building-office') }}
+                    <a href="{{ route('famille-accueil') }}" wire:navigate>
+                        <div class="creativity-card">
+                            <div class="icon d-flex">
+                                {{ svg('heroicon-s-building-office') }}
+                            </div>
+                            <h3>
+                                Devenir famille d'accueil
+                            </h3>
+                            <p>Accompagné par l'association aidez nous à sortir un ou plusieurs chats de la misère</p>
                         </div>
-                        <h3>
-                            <a href="{{ route('famille-accueil') }}" wire:navigate>Devenir famille d'accueil</a>
-                        </h3>
-                        <p>Accompagné par l'association aidez nous à sortir un ou plusieurs chats de la misère</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
