@@ -897,6 +897,8 @@
   }
   .creativity-warp .creativity1 {
     position: relative;
+      width: 300px;
+      bottom: 0;
   }
   .baby-care-image .style3-about2 {
     display: none;

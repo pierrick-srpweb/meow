@@ -1607,10 +1607,10 @@ Gallery Warp Style
   height: 60px;
   border-radius: 50%;
   text-align: center;
-  background-color: #FF6666;
+  background-color: #f98d1f;
 }
 .gallery-widget .gallery-icon:hover {
-  background-color: #050505;
+  background-color: #ffe3a5;
 }
 .gallery-widget .gallery-icon img {
   height: 18px;
