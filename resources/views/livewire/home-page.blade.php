@@ -8,7 +8,7 @@
                 </span>
                 <h1>Bienvenue chez <br>Meow and Co</h1>
                 <p>Notre association recueille, soigne et fait adopter des chats trouvés ou abandonnés pour leur offrir une seconde chance. Nous agissons dans les départements de Vendée (85), Charentes-Maritime (17) et Deux-Sèvres (79)<br><br>Rejoignez-nous pour changer leurs vies !</p>
-                <a href="about.html" class="default-btn style2">Découvrir les chats à adopter
+                <a href="{{ route('liste-chats') }}" class="default-btn style2" wire:navigate>Découvrir les chats à adopter
                     <img src="{{ asset('build/images/svgs/button-white.svg') }}"  alt="">
                 </a>
             </div>
@@ -63,7 +63,7 @@
                             </li>
                         </ul>
                         <p>Tous les chats sont accueillis en famille d'accueil (FA) ce qui permet de leur apprendre la vie en maison et de mieux les connaitre pour vous les présenter</p>
-                        <a href="about.html" class="default-btn style2">
+                        <a href="{{ route('famille-accueil') }}" class="default-btn style2" wire:navigate>
                             Devenir famille d'accueil
                             <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="svg">
                         </a>
