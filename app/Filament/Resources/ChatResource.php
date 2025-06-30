@@ -39,7 +39,8 @@ class ChatResource extends Resource
                     ->onColor('success')
                     ->columnSpanFull(),
 
-                TextInput::make('nom'),
+                TextInput::make('nom')
+                    ->required(),
 
                 SpatieMediaLibraryFileUpload::make('cv')->collection('cv'),
 
@@ -58,7 +59,8 @@ class ChatResource extends Resource
                         'Adulte' => 'adulte',
                         'Chaton' => 'chaton',
                         'Senior' => 'senior',
-                    ]),
+                    ])
+                    ->required(),
 
                 Fieldset::make('attributs')
                     ->schema([
