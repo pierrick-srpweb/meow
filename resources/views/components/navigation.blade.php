@@ -43,7 +43,7 @@
                 <div class="option-item">
                     <a href="{{ route('adopter') }}" class="default-btn style2" wire:navigate>
                         <span>Adopter un chat</span>
-                        <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
+                        <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="bouton flèche droite">
                     </a>
                 </div>
 

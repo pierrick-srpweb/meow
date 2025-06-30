@@ -9,10 +9,10 @@
                 <h1>Bienvenue chez <br>Meow and Co</h1>
                 <p>Notre association recueille, soigne et fait adopter des chats trouvés ou abandonnés pour leur offrir une seconde chance. Nous agissons dans les départements de Vendée (85), Charentes-Maritime (17) et Deux-Sèvres (79)<br><br>Rejoignez-nous pour changer leurs vies !</p>
                 <a href="{{ route('liste-chats') }}" class="default-btn style2" wire:navigate>Découvrir les chats à adopter
-                    <img src="{{ asset('build/images/svgs/button-white.svg') }}"  alt="">
+                    <img src="{{ asset('build/images/svgs/button-white.svg') }}"  alt="bouton flèche droite">
                 </a>
             </div>
-            <img src="{{ asset('build/images/meow/logo-carre.png') }}" class="hero-style3-main d-none d-md-block" alt="image">
+            <img src="{{ asset('build/images/meow/logo-carre.png') }}" class="hero-style3-main d-none d-md-block" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui.">
         </div>
     </div>
     <!-- Hero Style3 Warp End -->
@@ -26,15 +26,15 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="image">
-                                    <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="image">
+                                    <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite.">
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="image style3-about2">
-                                    <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="image">
+                                    <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant.">
                                 </div>
                                 <div class="image">
-                                    <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="image">
+                                    <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite.">
                                 </div>
                             </div>
                         </div>
@@ -50,22 +50,22 @@
                         <p>Fondée en 2025 avec pour missions :</p>
                         <ul class="more-about-list">
                             <li>
-                                <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="svg">
+                                <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="icone coche">
                                 Accueillir, soigner et faire adopter les chats et chatons abandonnés
                             </li>
                             <li>
-                                <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="svg">
+                                <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="icone coche">
                                 Travailler en collaboration et en relai avec d'autres association de protection animale
                             </li>
                             <li>
-                                <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="svg">
+                                <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="icone coche">
                                 Sensibiliser au bien-être animal et à l'importance de la stérilisation auprès des particulier et des collectivités
                             </li>
                         </ul>
                         <p>Tous les chats sont accueillis en famille d'accueil (FA) ce qui permet de leur apprendre la vie en maison et de mieux les connaitre pour vous les présenter</p>
                         <a href="{{ route('famille-accueil') }}" class="default-btn style2" wire:navigate>
                             Devenir famille d'accueil
-                            <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="svg">
+                            <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="bouton flèche droite">
                         </a>
                     </div>
                 </div>
@@ -143,13 +143,7 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('build/images/meow/don.jpg') }}" class="creativity1" alt="image" width="600px">
-        {{--<div class="all-shapes">
-            <img src="{{ asset('build/images/shapes/creativity-shape1.png') }}" class="creativity-shape1" alt="image">
-            <img src="{{ asset('build/images/shapes/creativity-shape2.png') }}" class="creativity-shape2" alt="image">
-            <img src="{{ asset('build/images/shapes/creativity-shape3.png') }}" class="creativity-shape3" alt="image">
-            <img src="{{ asset('build/images/shapes/creativity-shape4.png') }}" class="creativity-shape4" alt="image">
-        </div>--}}
+        <img src="{{ asset('build/images/meow/don.jpg') }}" class="creativity1" alt="illustration d'un chat roux assis qui lève une patte et plisse les yeux avec un sourire. Sur une pancarte à sa droite on peut lire Merci du fond du coeur pour votre don !" width="600px">
     </div>
     <!-- Creativity Warp End -->
 </main>

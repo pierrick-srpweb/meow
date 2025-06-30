@@ -13,7 +13,7 @@
         <div class="container">
             <div class="terms-conditions">
                 <div class="conditions-content text-center">
-                    <img src="{{ asset('build/images/meow/recherche-fa.jpg') }}" alt="" width="550px">
+                    <img src="{{ asset('build/images/meow/recherche-fa.jpg') }}" alt="Affiche avec le logo de l'association : Nous recherchons familles d'accueil et bénévoles dans les départements 17, 79 et 85. Contactez-nous au 06 27 56 02 82" width="550px">
                 </div>
             </div>
         </div>
