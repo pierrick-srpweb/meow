@@ -46,7 +46,7 @@
     <span id="dot"></span>
 
     <script src="{{ asset('build/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('build/js/swiper-bundle.min.js') }}"></script>
+{{--    <script src="{{ asset('build/js/swiper-bundle.min.js') }}"></script>--}}
     <script src="{{ asset('build/js/scrollCue.min.js') }}"></script>
     <script src="{{ asset('build/js/custom.js') }}"></script>
 </body>

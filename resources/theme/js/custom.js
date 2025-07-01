@@ -58,7 +58,7 @@
     };
 
     // Service Slider Js
-    var swiper = new Swiper(".service-slider", {
+    /*var swiper = new Swiper(".service-slider", {
         slidesPerView: 4,
         spaceBetween: 30,
         loop: true,
@@ -83,17 +83,17 @@
                 slidesPerView: 4
             }
         }
-    });
+    });*/
 
     // Hover JS
     try {
         var elements = document.querySelectorAll("[id^='my-element']");
-            elements.forEach(function(element) {
+        elements.forEach(function(element) {
             element.addEventListener("mouseover", function() {
-                elements.forEach(function(el) {
-                el.classList.remove("active");
-                });
                 element.classList.add("active");
+            });
+            element.addEventListener("mouseout", function() {
+                element.classList.remove("active");
             });
         });
 

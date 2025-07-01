@@ -36,7 +36,7 @@
                             <ul class="social-list">
                                 <li>
                                     <a href="{{ $info_asso->facebook }}" id="my-element1" class="icon bg1">
-                                        <i class="flaticon-facebook-app-symbol"></i>
+                                        @svg('uni-facebook-f-o', 'w-75 pe-1 pb-2')
                                     </a>
                                 </li>
                                 {{--<li>
