@@ -8,7 +8,7 @@
                 </span>
                 <h1>Bienvenue chez <br>Meow and Co</h1>
                 <p>Notre association recueille, soigne et fait adopter des chats trouvés ou abandonnés pour leur offrir une seconde chance. Nous agissons dans les départements de Vendée (85), Charentes-Maritime (17) et Deux-Sèvres (79)<br><br>Rejoignez-nous pour changer leurs vies !</p>
-                <a href="{{ route('liste-chats') }}" class="default-btn style2" wire:navigate>Découvrir les chats à adopter
+                <a href="{{ route('liste-chats') }}" class="default-btn style2" wire:navigate data-pan="liste-chats">Découvrir les chats à adopter
                     <img src="{{ asset('build/images/svgs/button-white.svg') }}"  alt="bouton flèche droite">
                 </a>
             </div>
@@ -75,7 +75,7 @@
                             </li>
                         </ul>
                         <p>Tous les chats sont accueillis en famille d'accueil (FA) ce qui permet de leur apprendre la vie en maison et de mieux les connaitre pour vous les présenter</p>
-                        <a href="{{ route('famille-accueil') }}" class="default-btn style2" wire:navigate>
+                        <a href="{{ route('famille-accueil') }}" class="default-btn style2" wire:navigate data-pan="fa">
                             Devenir famille d'accueil
                             <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="bouton flèche droite">
                         </a>
@@ -98,7 +98,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-sm-6">
-                    <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener">
+                    <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener" data-pan="don">
                         <div class="creativity-card">
                             <div class="icon d-flex">
                                 {{ svg('heroicon-s-currency-euro') }}
@@ -113,7 +113,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 col-sm-6">
-                    <a href="{{ route('adopter') }}" wire:navigate>
+                    <a href="{{ route('adopter') }}" wire:navigate data-pan="adopter">
                         <div class="creativity-card">
                             <div class="icon d-flex">
                                 {{ svg('heroicon-s-heart') }}
@@ -126,7 +126,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener">
+                    <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener" data-pan="facebook">
                         <div class="creativity-card">
                             <div class="icon d-flex">
                                 {{ svg('heroicon-s-share') }}
@@ -141,7 +141,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 col-sm-6">
-                    <a href="{{ route('famille-accueil') }}" wire:navigate>
+                    <a href="{{ route('famille-accueil') }}" wire:navigate data-pan="fa">
                         <div class="creativity-card">
                             <div class="icon d-flex">
                                 {{ svg('heroicon-s-building-office') }}
@@ -149,7 +149,7 @@
                             <h3>
                                 Devenir famille d'accueil
                             </h3>
-                            <p>Accompagné par l'association aidez nous à sortir un ou plusieurs chats de la misère</p>
+                            <p>Accompagné par l'association aidez-nous à sortir un ou plusieurs chats de la misère</p>
                         </div>
                     </a>
                 </div>

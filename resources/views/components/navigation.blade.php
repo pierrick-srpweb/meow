@@ -19,32 +19,32 @@
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" wire:navigate>
+                    <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" wire:navigate data-pan="homepage">
                         Accueil
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('liste-chats') }}" class="nav-link {{ request()->routeIs('liste-chats') ? 'active' : '' }}" wire:navigate>
+                    <a href="{{ route('liste-chats') }}" class="nav-link {{ request()->routeIs('liste-chats') ? 'active' : '' }}" wire:navigate data-pan="liste-chats">
                         Chats et chatons à adopter
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('adopter') }}" class="nav-link {{ request()->routeIs('adopter') ? 'active' : '' }}" wire:navigate>
+                    <a href="{{ route('adopter') }}" class="nav-link {{ request()->routeIs('adopter') ? 'active' : '' }}" wire:navigate data-pan="adopter">
                         Comment adopter ?
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" wire:navigate> Nous contacter</a>
+                    <a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" wire:navigate data-pan="contact"> Nous contacter</a>
                 </li>
             </ul>
 
             <div class="others-option d-flex align-items-center">
 
                 <div class="option-item">
-                    <a href="{{ route('adopter') }}" class="default-btn style2" wire:navigate>
+                    <a href="{{ route('adopter') }}" class="default-btn style2" wire:navigate data-pan="adopter">
                         <span>Adopter un chat</span>
                         <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="bouton flèche droite">
                     </a>
