@@ -1,7 +1,10 @@
 <div class="responsive-navbar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
     <div class="offcanvas-header">
         <a href="{{ route('home') }}" class="logo  d-flex align-items-center" wire:navigate>
-            <img src="{{ asset('build/images/meow/meow.png') }}" alt="logo" width="100px">
+            <picture>
+                <source srcset="{{ asset('build/images/meow/meow.webp') }}" type="image/webp">
+                <img src="{{ asset('build/images/meow/meow.png') }}" alt="logo chat assis" width="100px">
+            </picture>
             <span class="meow-logo">Association <br> Meow and Co</span>
         </a>
         <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">

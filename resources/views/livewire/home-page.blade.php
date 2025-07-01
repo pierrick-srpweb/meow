@@ -12,7 +12,10 @@
                     <img src="{{ asset('build/images/svgs/button-white.svg') }}"  alt="bouton flèche droite">
                 </a>
             </div>
-            <img src="{{ asset('build/images/meow/logo-carre.png') }}" class="hero-style3-main d-none d-md-block" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui.">
+            <picture>
+                <source srcset="{{ asset('build/images/meow/logo-carre.webp') }}" type="image/webp">
+                <img src="{{ asset('build/images/meow/logo-carre.png') }}" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui.">
+            </picture>
         </div>
     </div>
     <!-- Hero Style3 Warp End -->
@@ -26,15 +29,24 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="image">
-                                    <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite.">
+                                    <picture>
+                                        <source srcset="{{ asset('build/images/meow/luna-1.webp') }}" type="image/webp">
+                                        <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite." loading="lazy">
+                                    </picture>
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="image style3-about2">
-                                    <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant.">
+                                    <picture>
+                                        <source srcset="{{ asset('build/images/meow/chaton-1.webp') }}" type="image/webp">
+                                        <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant." loading="lazy">
+                                    </picture>
                                 </div>
                                 <div class="image">
-                                    <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite.">
+                                    <picture>
+                                        <source srcset="{{ asset('build/images/meow/chaton-2.webp') }}" type="image/webp">
+                                        <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite." loading="lazy">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +155,10 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('build/images/meow/don.jpg') }}" class="creativity1" alt="illustration d'un chat roux assis qui lève une patte et plisse les yeux avec un sourire. Sur une pancarte à sa droite on peut lire Merci du fond du coeur pour votre don !" width="600px">
+        <picture>
+            <source srcset="{{ asset('build/images/meow/don.webp') }}" type="image/webp">
+            <img src="{{ asset('build/images/meow/don.jpg') }}" loading="lazy" class="creativity1" alt="illustration d'un chat roux assis qui lève une patte et plisse les yeux avec un sourire. Sur une pancarte à sa droite on peut lire Merci du fond du coeur pour votre don !" width="600px">
+        </picture>
     </div>
     <!-- Creativity Warp End -->
 </main>
