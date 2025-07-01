@@ -4841,7 +4841,6 @@ Inner Service Warp Style
 }
 .service-small-warp .events-info .icon-info li {
   position: relative;
-  padding-left: 25px;
   margin-bottom: 14px;
 }
 .service-small-warp .events-info .icon-info li i {
@@ -7213,4 +7212,13 @@ Privacy Policy Area Style
     color: #5C2808;
     text-align: center;
     font-size: 1.5rem;
+}
+
+.icone-contact {
+    width: 20px;
+    color: #F98D1F;
+}
+
+.icon-info li {
+    display: flex;
 }

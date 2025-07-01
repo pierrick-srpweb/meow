@@ -20,16 +20,16 @@
                             <p>Privilégiez les messages sms ou email pour expliquer votre demande, nous vous recontacterons au plus vite</p>
                             <ul class="icon-info">
                                 <li>
-                                    <i class="fi fi-sr-marker"></i>
-                                    <span>{{ $info_asso->adresse }} <br> {{ $info_asso->code_postal }} {{ $info_asso->ville }}</span>
+                                    @svg('heroicon-o-home', 'icone-contact')
+                                    <span class="ps-2">{{ $info_asso->adresse }} <br> {{ $info_asso->code_postal }} {{ $info_asso->ville }}</span>
                                 </li>
                                 <li>
-                                    <i class="fi fi-sr-phone-call"></i>
-                                    <a href="tel:{{ $info_asso->telephone }}">{{ $info_asso->telephone }}</a>
+                                    @svg('heroicon-m-phone', 'icone-contact')
+                                    <a href="tel:{{ $info_asso->telephone }}" class="ps-2">{{ $info_asso->telephone }}</a>
                                 </li>
                                 <li>
-                                    <i class="fi fi-sr-envelope"></i>
-                                    <a href="mailto:{{ $info_asso->email }}">{{ $info_asso->email }}</a>
+                                    @svg('heroicon-o-envelope-open', 'icone-contact')
+                                    <a href="mailto:{{ $info_asso->email }}" class="ps-2">{{ $info_asso->email }}</a>
                                 </li>
                             </ul>
 
