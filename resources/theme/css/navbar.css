@@ -115,7 +115,7 @@ Navbar Warp  Style
   list-style-type: none;
 }
 .navbar .navbar-toggler {
-  color: #2C4073;
+  color: #5C2808;
   font-size: inherit;
   box-shadow: unset;
   border: none;
@@ -135,7 +135,7 @@ Navbar Warp  Style
   width: 30px;
   margin: 5px 0;
   display: block;
-  background: #2C4073;
+  background: #5C2808;
 }
 .navbar .navbar-nav .nav-item {
   position: relative;
@@ -680,8 +680,9 @@ Responsive Warp  Style
   justify-content: space-between;
 }
 .responsive-navbar .offcanvas-header .close-btn {
+    width: 60px;
   background-color: transparent;
-  color: #000000;
+  color: #5c2808;
   font-size: 20px;
   cursor: pointer;
   line-height: 1;
@@ -689,7 +690,7 @@ Responsive Warp  Style
   border: 0;
 }
 .responsive-navbar .offcanvas-header .close-btn:hover {
-  color: #FF6666;
+  color: #FC8F1F;
 }
 .responsive-navbar .offcanvas-body {
   padding: 30px 15px 15px;
@@ -1097,3 +1098,8 @@ Video Popup Warp  Style
     max-width: 1320px;
   }
 }/*# sourceMappingURL=navbar.css.map */
+
+
+.responsive-navbar .meow-logo {
+    line-height: 1;
+}

@@ -34,29 +34,6 @@
                                 <li>Date de naissance : <span>{{ \Carbon\Carbon::parse($chat->date_naissance)->locale('fr_FR')->isoFormat('DD MMMM YYYY') }}</span></li>
                                 <li>Sexe :<span>{{ Str::ucwords($chat->sexe) }}</span></li>
                             </ul>
-
-                            {{--<ul class="social-list">
-                                <li>
-                                    <a href="https://www.facebook.com/" id="my-element1q" class="icon bg1">
-                                        <i class="flaticon-facebook-app-symbol"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/login" id="my-element2q" class="icon bg1">
-                                        <i class="flaticon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" id="my-element3q" class="icon bg1">
-                                        <i class="flaticon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/" id="my-element4q" class="icon bg1">
-                                        <i class="flaticon-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>--}}
                         </div>
                     </div>
                 </div>

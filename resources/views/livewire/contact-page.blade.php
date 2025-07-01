@@ -39,21 +39,6 @@
                                         @svg('uni-facebook-f-o', 'w-75 pe-1 pb-2')
                                     </a>
                                 </li>--}}
-                                {{--<li>
-                                    <a href="https://twitter.com/login" id="my-element2" class="icon bg1">
-                                        <i class="flaticon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" id="my-element3" class="icon bg1">
-                                        <i class="flaticon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/" id="my-element4" class="icon bg1">
-                                        <i class="flaticon-linkedin"></i>
-                                    </a>
-                                </li>--}}
                             </ul>
                         </div>
                     </div>

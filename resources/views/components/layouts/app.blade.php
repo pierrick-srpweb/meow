@@ -9,9 +9,9 @@
     <meta name="author" content="Association Meow and Co">
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    {{--<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">--}}
 
     <!-- Links Of CSS File -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -46,7 +46,6 @@
     <span id="dot"></span>
 
     <script src="{{ asset('build/js/bootstrap.bundle.min.js') }}"></script>
-{{--    <script src="{{ asset('build/js/swiper-bundle.min.js') }}"></script>--}}
     <script src="{{ asset('build/js/scrollCue.min.js') }}"></script>
     <script src="{{ asset('build/js/custom.js') }}"></script>
 </body>
