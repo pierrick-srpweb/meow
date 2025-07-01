@@ -101,7 +101,7 @@
 
 
     // Load More
-    try {
+    /*try {
         // Load More
         var container = document.getElementById('container');
         var loadMoreButton = document.getElementById('load-more');
@@ -129,10 +129,10 @@
             itemsToShow += itemsIncrement;
             toggleItems();
         });
-    } catch (err) {}
+    } catch (err) {}*/
 
     // Load More
-    try {
+    /*try {
         // Load More
         var container = document.getElementById('container2');
         var loadMoreButton = document.getElementById('load-more');
@@ -160,7 +160,7 @@
             itemsToShow += itemsIncrement;
             toggleItems();
         });
-    } catch (err) {}
+    } catch (err) {}*/
 })()
 
 
