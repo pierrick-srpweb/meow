@@ -31,8 +31,8 @@
                                 <p>{{ $chat->description }}</p>
                             @endif
                             <ul class="date-info">
-                                <li>Date de naissance : <span>{{ \Carbon\Carbon::parse($chat->date_naissance)->locale('fr_FR')->isoFormat('DD MMMM YYYY') }}</span></li>
-                                <li>Sexe :<span>{{ Str::ucwords($chat->sexe) }}</span></li>
+                                <li>Date de naissance : <span>{{ isset($chat->sexe) ? \Carbon\Carbon::parse($chat->date_naissance)->locale('fr_FR')->isoFormat('DD MMMM YYYY') : 'inconnue' }}</span></li>
+                                <li>Sexe :<span>{{ isset($chat->sexe) ? Str::ucwords($chat->sexe) : 'Non renseigné' }}</span></li>
                             </ul>
                         </div>
                     </div>
