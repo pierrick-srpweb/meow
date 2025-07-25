@@ -108,14 +108,22 @@ class ChatResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('categorie'),
-
                 TextColumn::make('nom'),
 
                 TextColumn::make('sexe'),
 
                 TextColumn::make('date_naissance')
                     ->since(),
+
+                TextColumn::make('categorie')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'Adulte' => 'info',
+                        'Senior' => 'danger',
+                        'Chaton' => 'warning',
+                        'Adopté' => 'success',
+                        'Etoile' => 'gray',
+                    }),
 
                 ToggleColumn::make('ok_chien'),
 
