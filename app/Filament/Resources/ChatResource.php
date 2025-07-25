@@ -56,9 +56,11 @@ class ChatResource extends Resource
 
                 Select::make('categorie')
                     ->options([
-                        'Adulte' => 'adulte',
-                        'Chaton' => 'chaton',
-                        'Senior' => 'senior',
+                        'Adulte' => 'Adulte',
+                        'Chaton' => 'Chaton',
+                        'Senior' => 'Senior',
+                        'Adopté' => 'Adopté',
+                        'Etoile' => 'Etoile',
                     ])
                     ->required(),
 

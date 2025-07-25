@@ -26,6 +26,12 @@
                     <li class="nav-item" role="presentation">
                         <button @class(['nav-link', 'active' => $filtre === 'Senior']) type="button" wire:click="filtrer(`Senior`)">Senior</button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <button @class(['nav-link', 'active' => $filtre === 'Adopté']) type="button" wire:click="filtrer(`Adopté`)">Les adoptés</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button @class(['nav-link', 'active' => $filtre === 'Etoile']) type="button" wire:click="filtrer(`Etoile`)">Les étoiles</button>
+                    </li>
                 </ul>
 
 
