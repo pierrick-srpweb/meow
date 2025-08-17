@@ -50,7 +50,10 @@ class ChatResource extends Resource
                     'Femelle' => 'femelle',
                 ]),
 
-                SpatieMediaLibraryFileUpload::make('photos')->collection('photos'),
+                SpatieMediaLibraryFileUpload::make('photos')
+                    ->multiple()
+                    ->reorderable()
+                    ->collection('photos'),
 
                 DatePicker::make('date_naissance'),
 

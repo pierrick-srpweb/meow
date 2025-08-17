@@ -18,12 +18,14 @@
                             <img class="class-image-four" src="{{ $cv  }}" alt="image">
                         </div>
                     @endif
-                    <div class="text-center pb-5">
-                        <a href="{{ route('adopter') }}" class="default-btn style2">
-                            <span>Je l'adopte !</span>
-                            <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
-                        </a>
-                    </div>
+                    @if(!in_array($chat->categorie, ['Adopté', 'Etoile'], true))
+                        <div class="text-center pb-5">
+                            <a href="{{ route('adopter') }}" class="default-btn style2">
+                                <span>Je l'adopte !</span>
+                                <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
+                            </a>
+                        </div>
+                    @endif
                     <div class="service-small-warp">
                         <div class="events-info">
                             <h3>Son CV</h3>
@@ -31,13 +33,63 @@
                                 <p>{{ $chat->description }}</p>
                             @endif
                             <ul class="date-info">
-                                <li>Date de naissance : <span>{{ isset($chat->sexe) ? \Carbon\Carbon::parse($chat->date_naissance)->locale('fr_FR')->isoFormat('DD MMMM YYYY') : 'inconnue' }}</span></li>
-                                <li>Sexe :<span>{{ isset($chat->sexe) ? Str::ucwords($chat->sexe) : 'Non renseigné' }}</span></li>
+                                <li>Date de naissance :
+                                    <span>{{ isset($chat->sexe) ? \Carbon\Carbon::parse($chat->date_naissance)->locale('fr_FR')->isoFormat('DD MMMM YYYY') : 'inconnue' }}</span>
+                                </li>
+                                <li>Sexe
+                                    :<span>{{ isset($chat->sexe) ? Str::ucwords($chat->sexe) : 'Non renseigné' }}</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
+
+                    @if($chat->getMedia('photos')->isNotEmpty())
+                        <div class="photos-gallery-warp mt-5">
+                            <div class="text-center mb-4">
+                                <h3>Galerie photos</h3>
+                                <span>Cliquez sur la photo pour l'agrandir</span>
+                            </div>
+                            <div class="row justify-content-center g-3">
+                                @foreach($chat->getMedia('photos')->sortBy('order_column') as $photo)
+                                    <div class="col-6 col-md-4 col-lg-3">
+                                        <div class="photo-item">
+                                            <img
+                                                src="{{ $photo->getUrl() }}"
+                                                alt="Photo de {{ $chat->nom }}"
+                                                class="img-fluid rounded shadow-sm"
+                                                style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;"
+                                                onclick="openPhotoModal('{{ $photo->getUrl() }}')"
+                                            >
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal pour afficher les photos en grand -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Photo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPhotoModal(imageUrl) {
+            document.getElementById('modalImage').src = imageUrl;
+            var photoModal = new bootstrap.Modal(document.getElementById('photoModal'));
+            photoModal.show();
+        }
+    </script>
 </main>
