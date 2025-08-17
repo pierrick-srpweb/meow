@@ -15,7 +15,7 @@
             <div class="childhood-tab passion-tab">
                 <ul class="nav nav-pills mb-3" id="pills-tab1" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'tous'])  type="button" wire:click="filtrer(`tous`)">Tous</button>
+                        <button @class(['nav-link', 'active' => $filtre === 'tous'])  type="button" wire:click="filtrer(`tous`)">A adopter</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button @class(['nav-link', 'active' => $filtre === 'Adulte']) type="button" wire:click="filtrer(`Adulte`)">Adultes</button>
