@@ -23,6 +23,9 @@ class ListeChats extends Component
         if ($this->filtre !== 'tous') {
             $query = $query->where('categorie', $this->filtre);
         }
+        else {
+            $query = $query->whereIn('categorie', ['Adulte', 'Chaton', 'Senior']);
+        }
 
         return view('livewire.liste-chats', [
             'chats' => $query->where('est_publie', true)->get(),
