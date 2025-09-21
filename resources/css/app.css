@@ -6,3 +6,25 @@
 @import '../theme/css/navbar.css';
 @import '../theme/css/style.css';
 @import '../theme/css/responsive.css';
+
+/* Animation soulignage h3 section creativity-wrap */
+.creativity-warp .creativity-card h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.creativity-warp .creativity-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #FFC0AB;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.creativity-warp a:hover .creativity-card h3::after {
+    width: 110%;
+}

@@ -29,24 +29,36 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="image">
-                                    <picture>
-                                        <source srcset="{{ asset('build/images/meow/luna-1.webp') }}" type="image/webp">
-                                        <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite." loading="lazy">
-                                    </picture>
+                                    @if($photo_principale)
+                                        <img src="{{ asset('storage/' . $photo_principale) }}" alt="Photo principale de l'association" loading="lazy">
+                                    @else
+                                        <picture>
+                                            <source srcset="{{ asset('build/images/meow/luna-1.webp') }}" type="image/webp">
+                                            <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite." loading="lazy">
+                                        </picture>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="image style3-about2">
-                                    <picture>
-                                        <source srcset="{{ asset('build/images/meow/chaton-1.webp') }}" type="image/webp">
-                                        <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant." loading="lazy">
-                                    </picture>
+                                    @if($photo_secondaire_1)
+                                        <img src="{{ asset('storage/' . $photo_secondaire_1) }}" alt="Photo secondaire 1 de l'association" loading="lazy">
+                                    @else
+                                        <picture>
+                                            <source srcset="{{ asset('build/images/meow/chaton-1.webp') }}" type="image/webp">
+                                            <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant." loading="lazy">
+                                        </picture>
+                                    @endif
                                 </div>
                                 <div class="image">
-                                    <picture>
-                                        <source srcset="{{ asset('build/images/meow/chaton-2.webp') }}" type="image/webp">
-                                        <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite." loading="lazy">
-                                    </picture>
+                                    @if($photo_secondaire_2)
+                                        <img src="{{ asset('storage/' . $photo_secondaire_2) }}" alt="Photo secondaire 2 de l'association" loading="lazy">
+                                    @else
+                                        <picture>
+                                            <source srcset="{{ asset('build/images/meow/chaton-2.webp') }}" type="image/webp">
+                                            <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite." loading="lazy">
+                                        </picture>
+                                    @endif
                                 </div>
                             </div>
                         </div>
