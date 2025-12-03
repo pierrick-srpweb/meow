@@ -14,6 +14,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteAction;
@@ -161,14 +162,21 @@ class ChatResource extends Resource
                                 'Adoptable' => 'Adoptable',
                                 'Adopté' => 'Adopté',
                                 'Etoile' => 'Etoile',
-                            ]),
+                            ])
+                            ->reactive()
+                            ->afterStateUpdated(function (callable $set, $state) {
+                                if ($state !== 'Adoptable') {
+                                    $set('adoptable_filter', null);
+                                }
+                            }),
                         Select::make('adoptable_filter')
                             ->label('Catégorie adoptable')
                             ->options([
                                 'Adulte' => 'Adulte',
                                 'Chaton' => 'Chaton',
                                 'Senior' => 'Senior',
-                            ]),
+                            ])
+                            ->hidden(fn (Get $get): bool => $get('categorie_filter') !== 'Adoptable'),
                     ])
                     ->columns(2)
                     ->query(function (Builder $query, array $data): Builder {
