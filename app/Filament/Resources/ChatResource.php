@@ -21,7 +21,11 @@ use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Enums\FiltersLayout;
+use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Carbon;
 
 class ChatResource extends Resource
 {
@@ -111,12 +115,23 @@ class ChatResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('nom'),
+                TextColumn::make('nom')
+                ->sortable()->searchable(),
 
                 TextColumn::make('sexe'),
 
                 TextColumn::make('date_naissance')
-                    ->since(),
+                    ->label('Age')
+                    ->formatStateUsing(function(string $state): string {
+                        $age = Carbon::parse($state)->age;
+                        if( $age >= 1) {
+                            return $age . ($age === 1 ? ' an' : ' ans');
+                        }
+
+                        $mois = floor(Carbon::parse($state)->floatDiffInMonths());
+                        return $mois . ' mois';
+                    })
+                    ->sortable(),
 
                 TextColumn::make('categorie')
                     ->badge()
@@ -126,7 +141,8 @@ class ChatResource extends Resource
                         'Chaton' => 'warning',
                         'Adopté' => 'success',
                         'Etoile' => 'gray',
-                    }),
+                    })
+                    ->sortable(),
 
                 ToggleColumn::make('ok_chien'),
 
@@ -137,8 +153,45 @@ class ChatResource extends Resource
                 ToggleColumn::make('est_publie'),
             ])
             ->filters([
-                //
-            ])
+                Filter::make('categorie')
+                    ->form([
+                        Select::make('categorie_filter')
+                            ->label('Catégorie')
+                            ->options([
+                                'Adoptable' => 'Adoptable',
+                                'Adopté' => 'Adopté',
+                                'Etoile' => 'Etoile',
+                            ]),
+                        Select::make('adoptable_filter')
+                            ->label('Catégorie adoptable')
+                            ->options([
+                                'Adulte' => 'Adulte',
+                                'Chaton' => 'Chaton',
+                                'Senior' => 'Senior',
+                            ]),
+                    ])
+                    ->columns(2)
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['categorie_filter'],
+                                function(Builder $query, $categorie): Builder {
+                                    if ($categorie !== 'Adoptable') {
+                                        return $query->where('categorie', $categorie);
+                                    }
+
+                                    return $query->whereIn('categorie', ['Adulte', 'Chaton', 'Senior']);
+                                }
+                            )
+                            ->when(
+                                $data['adoptable_filter'],
+                                function(Builder $query, $categorie): Builder {
+                                    return $query->where('categorie', $categorie);
+                                }
+                            );
+                    })
+            ], layout: FiltersLayout::AboveContent)
+            ->filtersFormColumns(3)
             ->actions([
                 EditAction::make(),
                 DeleteAction::make(),
