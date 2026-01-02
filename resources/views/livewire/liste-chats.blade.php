@@ -40,7 +40,7 @@
                     @foreach($chats as $chat)
                         <div class="col-lg-3 item2 col-sm-6" wire:key="{{ $chat->id }}">
                             <div class="gallery-widget">
-                                <img src="{{ $chat->getMedia('cv')->first()?->getUrl() ?? asset('build/images/abouts/style3-about3.png') }}" class="gallery2" alt="image">
+                                <img src="{{ $chat->getMedia('cv')->first()?->getUrl() ?? asset('build/images/abouts/style3-about3.png') }}" class="gallery2" alt="image" loading="lazy">
                                 <a href="{{ route('voir-chat', $chat->slug) }}" class="gallery-icon" data-pan="{{ $chat->slug }}">
                                     <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
                                 </a>
