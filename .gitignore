@@ -27,3 +27,7 @@ CLAUDE.md
 # Project exclude paths
 /storage/app/
 /storage/framework/
+
+**/caddy
+frankenphp
+frankenphp-worker.php
