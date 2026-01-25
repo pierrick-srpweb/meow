@@ -904,7 +904,7 @@
     display: none;
   }
   .baby-care-image .image {
-    display: none;
+    max-width: 75%;
   }
   .award-warp {
     padding-top: 110px;

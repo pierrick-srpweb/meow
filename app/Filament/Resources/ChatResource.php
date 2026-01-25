@@ -47,7 +47,9 @@ class ChatResource extends Resource
                 TextInput::make('nom')
                     ->required(),
 
-                SpatieMediaLibraryFileUpload::make('cv')->collection('cv')->required(),
+                SpatieMediaLibraryFileUpload::make('cv')
+                    ->collection('cv')
+                    ->required(),
 
                 Select::make('sexe')
                 ->options([
