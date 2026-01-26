@@ -13,7 +13,6 @@
         "filament/spatie-laravel-media-library-plugin": "^4.6",
         "filament/spatie-laravel-settings-plugin": "^4.6",
         "laravel/framework": "^12.48.1",
-        "laravel/octane": "^2.13.4",
         "laravel/tinker": "^2.11.0",
         "livewire/livewire": "^3.7.6",
         "panphp/pan": "^0.1.8",
