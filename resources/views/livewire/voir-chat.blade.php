@@ -13,9 +13,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 pb-5">
-                    @if($cv)
+                    @if($chat->getMedia('cv')->isNotEmpty())
                         <div class="text-center mb-5">
-                            <img class="class-image-four" src="{{ $cv  }}" alt="image">
+                            <img class="class-image-four" src="{{ $chat->getFirstMediaUrl('cv')  }}" alt="image">
                         </div>
                     @endif
                     @if(!in_array($chat->categorie, ['Adopté', 'Etoile'], true))
