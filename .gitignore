@@ -27,7 +27,14 @@ CLAUDE.md
 # Project exclude paths
 /storage/app/
 /storage/framework/
+/storage/debugbar/
 
 **/caddy
 frankenphp
 frankenphp-worker.php
+
+# AI Tools
+/.ai/
+/.claude/
+/.junie/
+boost.json
