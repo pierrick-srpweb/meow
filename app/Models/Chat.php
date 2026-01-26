@@ -50,7 +50,15 @@ class Chat extends Model implements HasMedia
     {
         $this
             ->addMediaConversion('preview')
-            ->fit(Fit::Contain, 300, 300)
+            ->fit(Fit::Contain, 400, 400)
             ->nonQueued();
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('cv')
+            ->singleFile();
+
+        $this->addMediaCollection('photos');
     }
 }

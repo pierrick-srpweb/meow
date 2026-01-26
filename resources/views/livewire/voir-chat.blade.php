@@ -44,22 +44,30 @@
                     </div>
 
                     @if($chat->getMedia('photos')->isNotEmpty())
-                        <div class="photos-gallery-warp mt-5">
+                        <div class="photos-gallery-warp mt-5" id="gallery-chat">
                             <div class="text-center mb-4">
                                 <h3>Galerie photos</h3>
                                 <span>Cliquez sur la photo pour l'agrandir</span>
                             </div>
                             <div class="row justify-content-center g-3">
                                 @foreach($chat->getMedia('photos')->sortBy('order_column') as $photo)
+                                    @php
+                                        $dimensions = getimagesize($photo->getPath());
+                                        $width = $dimensions ? $dimensions[0] : 1200;
+                                        $height = $dimensions ? $dimensions[1] : 800;
+                                    @endphp
                                     <div class="col-6 col-md-4 col-lg-3">
                                         <div class="photo-item">
-                                            <img
-                                                src="{{ $photo->getUrl() }}"
-                                                alt="Photo de {{ $chat->nom }}"
-                                                class="img-fluid rounded shadow-sm"
-                                                style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;"
-                                                onclick="openPhotoModal('{{ $photo->getUrl() }}')"
-                                            >
+                                            <a href="{{ $photo->getUrl() }}"
+                                               data-pswp-width="{{ $width }}"
+                                               data-pswp-height="{{ $height }}"
+                                               target="_blank">
+                                                <img
+                                                    src="{{ $photo->getUrl('preview') }}"
+                                                    alt="Photo de {{ $chat->nom }}"
+                                                    class="img-fluid rounded shadow-sm"
+                                                    style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
+                                            </a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -71,25 +79,4 @@
         </div>
     </div>
 
-    <!-- Modal pour afficher les photos en grand -->
-    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" src="" alt="Photo" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openPhotoModal(imageUrl) {
-            document.getElementById('modalImage').src = imageUrl;
-            var photoModal = new bootstrap.Modal(document.getElementById('photoModal'));
-            photoModal.show();
-        }
-    </script>
 </main>

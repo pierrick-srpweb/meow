@@ -67,6 +67,7 @@ class ChatForm
 
                 SpatieMediaLibraryFileUpload::make('cv')
                     ->collection('cv')
+                    ->responsiveImages()
                     ->columnSpanFull()
                     ->required(),
 

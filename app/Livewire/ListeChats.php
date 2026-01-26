@@ -27,7 +27,9 @@ class ListeChats extends Component
         }
 
         return view('livewire.liste-chats', [
-            'chats' => $query->where('est_publie', true)->get(),
+            'chats' => $query->where('est_publie', true)
+                ->with('media')
+                ->get(),
         ]);
     }
 }
