@@ -3,26 +3,27 @@
 namespace App\Filament\Pages;
 
 use App\Settings\PageSettings;
-use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 
 class AccueilPage extends SettingsPage
 {
-    protected static ?string $navigationIcon = 'heroicon-o-home';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-home';
 
-    protected static ?string $navigationGroup = 'Page';
+    protected static string|\UnitEnum|null $navigationGroup = 'Page';
 
     protected static ?string $navigationLabel = 'Accueil';
 
     protected static string $settings = PageSettings::class;
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Section::make('L\'Association')
+        return $schema
+            ->components([
+                Section::make('L\'Association')
                     ->schema([
                         FileUpload::make('photo_principale_association')
                             ->label('Photo principale')
@@ -33,7 +34,7 @@ class AccueilPage extends SettingsPage
                             ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                             ->maxSize(5120),
 
-                        Forms\Components\Grid::make(2)
+                        Grid::make(2)
                             ->schema([
                                 FileUpload::make('photo_secondaire_1_association')
                                     ->label('Photo secondaire 1')

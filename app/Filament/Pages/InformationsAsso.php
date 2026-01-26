@@ -3,22 +3,22 @@
 namespace App\Filament\Pages;
 
 use App\Settings\AssoSettings;
-use Filament\Forms;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 
 class InformationsAsso extends SettingsPage
 {
-    protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = AssoSettings::class;
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Section::make('Adresse')
+        return $schema
+            ->components([
+                Section::make('Adresse')
                     ->columns(2)
                     ->schema([
                         TextInput::make('adresse')
@@ -32,7 +32,7 @@ class InformationsAsso extends SettingsPage
                             ->required(),
                     ]),
 
-                Forms\Components\Section::make('Info de contact')
+                Section::make('Info de contact')
                     ->columns(2)
                     ->schema([
                         TextInput::make('telephone')
@@ -42,7 +42,7 @@ class InformationsAsso extends SettingsPage
 
                     ]),
 
-                Forms\Components\Section::make('Liens')
+                Section::make('Liens')
                     ->columns(2)
                     ->schema([
                         TextInput::make('facebook')

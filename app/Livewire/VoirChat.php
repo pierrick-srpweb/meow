@@ -14,8 +14,8 @@ class VoirChat extends Component
         $cv = $this->chat->getMedia('cv')->first()?->getUrl();
 
         return view('livewire.voir-chat', [
-            'cv' => $cv
+            'cv' => $cv,
         ])
-        ->title($this->chat->nom);
+            ->title($this->chat->nom);
     }
 }

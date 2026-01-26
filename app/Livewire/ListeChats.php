@@ -22,8 +22,7 @@ class ListeChats extends Component
 
         if ($this->filtre !== 'tous') {
             $query = $query->where('categorie', $this->filtre);
-        }
-        else {
+        } else {
             $query = $query->whereIn('categorie', ['Adulte', 'Chaton', 'Senior']);
         }
 

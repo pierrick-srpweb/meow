@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\ChatResource\Pages;
+namespace App\Filament\Resources\Chats\Pages;
 
-use App\Filament\Resources\ChatResource;
+use App\Filament\Resources\Chats\ChatResource;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
@@ -18,7 +18,7 @@ class EditChat extends EditRecord
                 ->label('Voir sur le site')
                 ->icon('heroicon-o-eye')
                 ->color('info')
-                ->url(fn() => route('voir-chat', $this->record))
+                ->url(fn () => route('voir-chat', $this->record))
                 ->openUrlInNewTab(),
             DeleteAction::make(),
         ];

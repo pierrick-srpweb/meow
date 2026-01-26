@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\TemoignageResource\Pages;
+namespace App\Filament\Resources\Temoignages\Pages;
 
-use App\Filament\Resources\TemoignageResource;
+use App\Filament\Resources\Temoignages\TemoignageResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

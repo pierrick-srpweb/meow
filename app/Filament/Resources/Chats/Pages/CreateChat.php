@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\ChatResource\Pages;
+namespace App\Filament\Resources\Chats\Pages;
 
-use App\Filament\Resources\ChatResource;
+use App\Filament\Resources\Chats\ChatResource;
 use App\Models\Chat;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Str;
@@ -13,7 +13,7 @@ class CreateChat extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        $data['slug'] = Str::slug(Chat::count() + 15623 . '-' . $data['nom']);
+        $data['slug'] = Str::slug(Chat::count() + 15623 .'-'.$data['nom']);
 
         return $data;
     }
