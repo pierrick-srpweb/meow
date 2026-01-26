@@ -23,6 +23,8 @@ use Filament\Tables\Table;
 
 class TemoignageResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = Temoignage::class;
 
     protected static ?string $slug = 'temoignages';
