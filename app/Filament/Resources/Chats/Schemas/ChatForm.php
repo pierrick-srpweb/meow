@@ -66,12 +66,18 @@ class ChatForm
                     ->columnSpanFull(),
 
                 SpatieMediaLibraryFileUpload::make('cv')
+                    ->image()
+                    ->optimize('webp')
+                    ->maxImageWidth(1200)
                     ->collection('cv')
                     ->responsiveImages()
                     ->columnSpanFull()
                     ->required(),
 
                 SpatieMediaLibraryFileUpload::make('photos')
+                    ->image()
+                    ->optimize('webp')
+                    ->maxImageWidth(1200)
                     ->multiple()
                     ->reorderable()
                     ->columnSpanFull()
