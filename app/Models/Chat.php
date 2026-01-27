@@ -57,8 +57,10 @@ class Chat extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('cv')
+            ->useDisk('public')
             ->singleFile();
 
-        $this->addMediaCollection('photos');
+        $this->addMediaCollection('photos')
+            ->useDisk('public');
     }
 }
