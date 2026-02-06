@@ -27,11 +27,6 @@
 10. Sign In CSS
 11. FAQ Terms & Conditions
 -------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
-
 html {
     height: 100%
 }
@@ -893,7 +888,6 @@ Counter Warp Style
   text-align: center;
 }
 .inner-counter-warp .single-counter h1 {
-  font-family: "Love Ya Like A Sister";
   font-weight: 400;
   font-size: 70px;
   color: #FF6666;
@@ -1231,7 +1225,6 @@ Hurry Warp Style
   display: none;
 }
 .inner-hurry-warp .hurry-count li span {
-  font-family: "Love Ya Like A Sister";
   font-style: normal;
   font-weight: 400;
   line-height: 1;
@@ -1649,7 +1642,6 @@ Program Warp Style
 }
 .program-card-warp span {
   display: block;
-  font-family: "Love Ya Like A Sister";
   font-weight: 400;
   font-size: 24px;
   color: #FF6666;
@@ -2558,7 +2550,6 @@ Expert Counter Warp Style
   position: relative;
 }
 .expert-counter span {
-  font-family: "Love Ya Like A Sister";
   font-weight: 400;
   font-size: 70px;
   line-height: 1;
@@ -2681,7 +2672,6 @@ Hurry Style2 Warp Style
   display: none;
 }
 .inner-hurry-style2 .hurry-style2-content .hurry-count li span {
-  font-family: "Love Ya Like A Sister";
   font-style: normal;
   font-weight: 400;
   line-height: 1;
@@ -3138,7 +3128,6 @@ Events  Warp Style
   background-image: url(../images/svgs/event3.svg);
 }
 .event-content .event-list .date-warp h3 {
-  font-family: "Love Ya Like A Sister";
   font-weight: 400;
   line-height: 1;
   font-size: 40px;
@@ -3885,7 +3874,6 @@ Take Seat Warp Style
   display: none;
 }
 .inner-take-seat .take-seat-content .hurry-count li span {
-  font-family: "Love Ya Like A Sister";
   font-style: normal;
   font-weight: 400;
   line-height: 1;
@@ -4143,7 +4131,6 @@ Upcoming Warp Style
   background-image: url(../images/svgs/event3.svg);
 }
 .upcoming-list .date-warp h3 {
-  font-family: "Love Ya Like A Sister";
   font-weight: 400;
   line-height: 1;
   font-size: 40px;
@@ -5371,7 +5358,6 @@ Cursor  Style
   display: block;
   color: #FF6666;
   font-size: 24px;
-  font-family: "Love Ya Like A Sister";
   font-weight: 400;
   margin-bottom: 15px;
 }
