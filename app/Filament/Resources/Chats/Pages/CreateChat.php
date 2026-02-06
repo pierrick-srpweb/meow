@@ -11,6 +11,7 @@ class CreateChat extends CreateRecord
 {
     protected static string $resource = ChatResource::class;
 
+    #[\Override]
     protected function mutateFormDataBeforeCreate(array $data): array
     {
         $data['slug'] = Str::slug(Chat::count() + 15623 .'-'.$data['nom']);

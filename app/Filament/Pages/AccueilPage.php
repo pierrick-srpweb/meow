@@ -19,6 +19,7 @@ class AccueilPage extends SettingsPage
 
     protected static string $settings = PageSettings::class;
 
+    #[\Override]
     public function form(Schema $schema): Schema
     {
         return $schema

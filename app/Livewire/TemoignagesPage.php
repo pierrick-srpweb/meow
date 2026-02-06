@@ -8,7 +8,7 @@ use Livewire\Component;
 #[Title('Témoignages')]
 class TemoignagesPage extends Component
 {
-    public function render()
+    public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
     {
         return view('livewire.temoignages');
     }

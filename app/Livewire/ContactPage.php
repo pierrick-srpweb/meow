@@ -9,7 +9,7 @@ use Livewire\Component;
 #[Title('Nous contacter')]
 class ContactPage extends Component
 {
-    public function render()
+    public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
     {
         return view('livewire.contact-page', [
             'info_asso' => app(AssoSettings::class),

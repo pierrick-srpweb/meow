@@ -8,16 +8,16 @@ use App\Models\Temoignage;
 use App\Models\User;
 use Livewire\Livewire;
 
-beforeEach(function () {
+beforeEach(function (): void {
     $this->actingAs(User::factory()->create());
 });
 
-it('can render list page', function () {
+it('can render list page', function (): void {
     Livewire::test(ListTemoignages::class)
         ->assertSuccessful();
 });
 
-it('can list temoignages', function () {
+it('can list temoignages', function (): void {
     $chat = Chat::factory()->create();
     $temoignages = Temoignage::factory()->count(3)->create([
         'chat_id' => $chat->id,
@@ -27,12 +27,12 @@ it('can list temoignages', function () {
         ->assertCanSeeTableRecords($temoignages);
 });
 
-it('can render create page', function () {
+it('can render create page', function (): void {
     Livewire::test(CreateTemoignage::class)
         ->assertSuccessful();
 });
 
-it('can create temoignage with required fields', function () {
+it('can create temoignage with required fields', function (): void {
     $chat = Chat::factory()->create();
     $newData = [
         'chat_id' => $chat->id,
@@ -52,7 +52,7 @@ it('can create temoignage with required fields', function () {
         ->famille->toBe('Famille Dupont');
 });
 
-it('validates famille is required on create', function () {
+it('validates famille is required on create', function (): void {
     Livewire::test(CreateTemoignage::class)
         ->fillForm([
             'famille' => null,
@@ -62,7 +62,7 @@ it('validates famille is required on create', function () {
         ->assertHasFormErrors(['famille' => 'required']);
 });
 
-it('can render edit page', function () {
+it('can render edit page', function (): void {
     $chat = Chat::factory()->create();
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat->id]);
 
@@ -70,7 +70,7 @@ it('can render edit page', function () {
         ->assertSuccessful();
 });
 
-it('can retrieve data on edit page', function () {
+it('can retrieve data on edit page', function (): void {
     $chat = Chat::factory()->create();
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat->id]);
 
@@ -81,7 +81,7 @@ it('can retrieve data on edit page', function () {
         ]);
 });
 
-it('can update temoignage', function () {
+it('can update temoignage', function (): void {
     $chat = Chat::factory()->create();
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat->id]);
     $newData = [
@@ -97,7 +97,7 @@ it('can update temoignage', function () {
     expect($temoignage->refresh()->famille)->toBe('Famille Martin');
 });
 
-it('validates famille is required on update', function () {
+it('validates famille is required on update', function (): void {
     $chat = Chat::factory()->create();
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat->id]);
 
@@ -109,7 +109,7 @@ it('validates famille is required on update', function () {
         ->assertHasFormErrors(['famille' => 'required']);
 });
 
-it('can delete temoignage', function () {
+it('can delete temoignage', function (): void {
     $chat = Chat::factory()->create();
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat->id]);
 
@@ -119,7 +119,7 @@ it('can delete temoignage', function () {
     $this->assertModelMissing($temoignage);
 });
 
-it('can associate temoignage with chat', function () {
+it('can associate temoignage with chat', function (): void {
     $chat1 = Chat::factory()->create(['nom' => 'Minou']);
     $chat2 = Chat::factory()->create(['nom' => 'Felix']);
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat1->id]);
@@ -132,7 +132,7 @@ it('can associate temoignage with chat', function () {
     expect($temoignage->refresh()->chat_id)->toBe($chat2->id);
 });
 
-it('loads chat relationship correctly', function () {
+it('loads chat relationship correctly', function (): void {
     $chat = Chat::factory()->create(['nom' => 'Minou']);
     $temoignage = Temoignage::factory()->create(['chat_id' => $chat->id]);
 
@@ -141,7 +141,7 @@ it('loads chat relationship correctly', function () {
         ->nom->toBe('Minou');
 });
 
-it('can create temoignage without chat_id', function () {
+it('can create temoignage without chat_id', function (): void {
     $newData = [
         'chat_id' => null,
         'contenu' => 'Témoignage sans chat associé.',

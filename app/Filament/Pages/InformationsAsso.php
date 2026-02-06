@@ -14,6 +14,7 @@ class InformationsAsso extends SettingsPage
 
     protected static string $settings = AssoSettings::class;
 
+    #[\Override]
     public function form(Schema $schema): Schema
     {
         return $schema

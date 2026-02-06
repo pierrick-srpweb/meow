@@ -11,12 +11,12 @@ class ListeChats extends Component
 {
     public string $filtre = 'tous';
 
-    public function filtrer($value)
+    public function filtrer(string $value): void
     {
         $this->filtre = $value;
     }
 
-    public function render()
+    public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
     {
         $query = Chat::query();
 

@@ -18,7 +18,7 @@ class EditChat extends EditRecord
                 ->label('Voir sur le site')
                 ->icon('heroicon-o-eye')
                 ->color('info')
-                ->url(fn () => route('voir-chat', $this->record))
+                ->url(fn (): string => route('voir-chat', $this->record))
                 ->openUrlInNewTab(),
             DeleteAction::make(),
         ];

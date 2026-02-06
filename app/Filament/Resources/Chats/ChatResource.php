@@ -20,11 +20,13 @@ class ChatResource extends Resource
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    #[\Override]
     public static function form(Schema $schema): Schema
     {
         return ChatForm::configure($schema);
     }
 
+    #[\Override]
     public static function table(Table $table): Table
     {
         return ChatsTable::configure($table);

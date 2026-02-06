@@ -10,7 +10,6 @@ use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
@@ -79,7 +78,7 @@ class ChatsTable
                                 'Etoile' => 'Etoile',
                             ])
                             ->reactive()
-                            ->afterStateUpdated(function (callable $set, $state) {
+                            ->afterStateUpdated(function (callable $set, $state): void {
                                 if ($state !== 'Adoptable') {
                                     $set('adoptable_filter', null);
                                 }
@@ -94,25 +93,21 @@ class ChatsTable
                             ->hidden(fn (Get $get): bool => $get('categorie_filter') !== 'Adoptable'),
                     ])
                     ->columns(2)
-                    ->query(function (Builder $query, array $data): Builder {
-                        return $query
-                            ->when(
-                                $data['categorie_filter'],
-                                function (Builder $query, $categorie): Builder {
-                                    if ($categorie !== 'Adoptable') {
-                                        return $query->where('categorie', $categorie);
-                                    }
-
-                                    return $query->whereIn('categorie', ['Adulte', 'Chaton', 'Senior']);
-                                }
-                            )
-                            ->when(
-                                $data['adoptable_filter'],
-                                function (Builder $query, $categorie): Builder {
+                    ->query(fn(Builder $query, array $data): Builder => $query
+                        ->when(
+                            $data['categorie_filter'],
+                            function (Builder $query, $categorie): Builder {
+                                if ($categorie !== 'Adoptable') {
                                     return $query->where('categorie', $categorie);
                                 }
-                            );
-                    }),
+
+                                return $query->whereIn('categorie', ['Adulte', 'Chaton', 'Senior']);
+                            }
+                        )
+                        ->when(
+                            $data['adoptable_filter'],
+                            fn(Builder $query, $categorie): Builder => $query->where('categorie', $categorie)
+                        )),
             ], layout: FiltersLayout::AboveContent)
             ->filtersFormColumns(3)
             ->deferFilters(false)

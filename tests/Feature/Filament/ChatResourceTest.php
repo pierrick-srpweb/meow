@@ -9,29 +9,29 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
 
-beforeEach(function () {
+beforeEach(function (): void {
     $this->actingAs(User::factory()->create());
     Storage::fake('public');
 });
 
-it('can render list page', function () {
+it('can render list page', function (): void {
     Livewire::test(ListChats::class)
         ->assertSuccessful();
 });
 
-it('can list chats', function () {
+it('can list chats', function (): void {
     $chats = Chat::factory()->count(3)->create();
 
     Livewire::test(ListChats::class)
         ->assertCanSeeTableRecords($chats);
 });
 
-it('can render create page', function () {
+it('can render create page', function (): void {
     Livewire::test(CreateChat::class)
         ->assertSuccessful();
 });
 
-it('can create chat with required fields', function () {
+it('can create chat with required fields', function (): void {
     $newData = [
         'nom' => 'Minou',
         'categorie' => 'Adulte',
@@ -49,7 +49,7 @@ it('can create chat with required fields', function () {
     ]);
 });
 
-it('validates nom is required on create', function () {
+it('validates nom is required on create', function (): void {
     Livewire::test(CreateChat::class)
         ->fillForm([
             'nom' => null,
@@ -59,7 +59,7 @@ it('validates nom is required on create', function () {
         ->assertHasFormErrors(['nom' => 'required']);
 });
 
-it('validates categorie is required on create', function () {
+it('validates categorie is required on create', function (): void {
     Livewire::test(CreateChat::class)
         ->fillForm([
             'nom' => 'Test',
@@ -69,7 +69,7 @@ it('validates categorie is required on create', function () {
         ->assertHasFormErrors(['categorie' => 'required']);
 });
 
-it('validates cv is required on create', function () {
+it('validates cv is required on create', function (): void {
     Livewire::test(CreateChat::class)
         ->fillForm([
             'nom' => 'Test',
@@ -80,14 +80,14 @@ it('validates cv is required on create', function () {
         ->assertHasFormErrors(['cv' => 'required']);
 });
 
-it('can render edit page', function () {
+it('can render edit page', function (): void {
     $chat = Chat::factory()->create();
 
     Livewire::test(EditChat::class, ['record' => $chat->getRouteKey()])
         ->assertSuccessful();
 });
 
-it('can retrieve data on edit page', function () {
+it('can retrieve data on edit page', function (): void {
     $chat = Chat::factory()->create();
 
     Livewire::test(EditChat::class, ['record' => $chat->getRouteKey()])
@@ -97,7 +97,7 @@ it('can retrieve data on edit page', function () {
         ]);
 });
 
-it('can delete chat', function () {
+it('can delete chat', function (): void {
     $chat = Chat::factory()->create();
 
     Livewire::test(EditChat::class, ['record' => $chat->getRouteKey()])
@@ -106,7 +106,7 @@ it('can delete chat', function () {
     $this->assertModelMissing($chat);
 });
 
-it('can create chat with all attributes', function () {
+it('can create chat with all attributes', function (): void {
     $newData = [
         'nom' => 'Minou',
         'categorie' => 'Adulte',
@@ -133,7 +133,7 @@ it('can create chat with all attributes', function () {
     ]);
 });
 
-it('can create chat with different categories', function (string $categorie) {
+it('can create chat with different categories', function (string $categorie): void {
     $newData = [
         'nom' => 'Test Chat',
         'categorie' => $categorie,
@@ -151,7 +151,7 @@ it('can create chat with different categories', function (string $categorie) {
     ]);
 })->with(['Adulte', 'Chaton', 'Senior', 'Adopté', 'Etoile']);
 
-it('can create chat with date naissance', function () {
+it('can create chat with date naissance', function (): void {
     $date = now()->subYear();
 
     $newData = [
@@ -170,7 +170,7 @@ it('can create chat with date naissance', function () {
     expect($chat->date_naissance->format('Y-m-d'))->toBe($date->format('Y-m-d'));
 });
 
-it('can create chat with photo gallery', function () {
+it('can create chat with photo gallery', function (): void {
     $newData = [
         'nom' => 'Test Chat',
         'categorie' => 'Adulte',
