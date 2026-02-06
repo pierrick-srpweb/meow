@@ -34,40 +34,5 @@
                 </a>
             </div>
         </div>
-        {{--<div class="others-option d-flex align-items-center">
-
-            <div class="option-item">
-                <a href="{{ route('adopter') }}" class="default-btn style1" wire:navigate> Adopter un chat
-                    <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
-                </a>
-            </div>
-
-            --}}{{--<div class="option-item">
-                <div class="search-bar">
-                    <div class="modal-search">
-                        <button class="open-button" onclick="openSearch()">
-                            <img src="{{ asset('build/images/svgs/search1.svg') }}" alt=""></button>
-                        <div id="myOverlay" class="overlay">
-                            <span class="close-btn" onclick="closeSearch()" title="Close Overlay">×</span>
-                            <div class="overlay-content" >
-                                <form >
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <button type="submit" class="search-btn">
-                                        <img src="{{ asset('build/images/svgs/search1.svg') }}" alt="">
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>--}}{{--
-
-            <div class="option-item">
-                <button class="btn side-bar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                    <img src="{{ asset('build/images/svgs/dotsmenu1.svg') }}" alt="">
-                </button>
-            </div>
-
-        </div>--}}
     </div>
 </div>

@@ -50,12 +50,6 @@
                     </a>
                 </div>
 
-                {{--<div class="option-item">
-                    <button class="btn side-bar-btn style2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                        <img src="{{ asset('build/images/svgs/dotsmenu1.svg') }}" alt="">
-                    </button>
-                </div>--}}
-
             </div>
         </div>
 

@@ -32,14 +32,6 @@
                                     <a href="mailto:{{ $info_asso->email }}" class="ps-2">{{ $info_asso->email }}</a>
                                 </li>
                             </ul>
-
-                            <ul class="social-list">
-                                {{--<li>
-                                    <a href="{{ $info_asso->facebook }}" id="my-element1" class="icon bg1">
-                                        @svg('uni-facebook-f-o', 'w-75 pe-1 pb-2')
-                                    </a>
-                                </li>--}}
-                            </ul>
                         </div>
                     </div>
                 </div>

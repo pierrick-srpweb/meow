@@ -11,8 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&text=AssociationMeowandCo&display=swap" rel="stylesheet">
 
     <!-- Links Of CSS File -->
@@ -37,18 +37,11 @@
 
     <!-- Scroll Top Btn -->
     <div class="top-button-icon">
-        <button id="scrollTopBtn">
-            {{--<i class="ri-arrow-up-circle-fill"></i>--}}
-        </button>
+        <button id="scrollTopBtn"></button>
     </div>
-    <!-- Scroll Top Btn -->
 
-
-    <span id="mouse-follower"></span>
-    <span id="dot"></span>
-
-    <script src="{{ asset('build/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('build/js/scrollCue.min.js') }}"></script>
-    <script src="{{ asset('build/js/custom.js') }}"></script>
+    <script src="{{ asset('build/js/bootstrap.bundle.min.js') }}" defer></script>
+    <script src="{{ asset('build/js/scrollCue.min.js') }}" defer></script>
+    <script src="{{ asset('build/js/custom.js') }}" defer></script>
 </body>
 </html>

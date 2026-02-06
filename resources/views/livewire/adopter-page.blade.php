@@ -15,7 +15,6 @@
                 <div class="conditions-content">
                     <h3>Un chat ou un chaton vous plait ?</h3>
                     <p>Appelez-nous au <b>06 27 56 02 82</b> pour une première prise de contact et discuter ensemble de votre projet d'adoption.</p>
-                    <p></p>
                 </div>
 
                 <div class="conditions-content">
