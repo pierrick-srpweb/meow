@@ -25,7 +25,7 @@
                                 </li>
                                 <li>
                                     @svg('heroicon-m-phone', 'icone-contact')
-                                    <a href="tel:{{ $info_asso->telephone }}" class="ps-2">{{ $info_asso->telephone }}</a>
+                                    <a href="tel:{{ $info_asso->telephone }}" class="ps-2">{{ $info_asso->telephoneFormatted() }}</a>
                                 </li>
                                 <li>
                                     @svg('heroicon-o-envelope-open', 'icone-contact')

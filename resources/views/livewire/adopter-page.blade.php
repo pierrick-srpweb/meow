@@ -14,44 +14,18 @@
             <div class="terms-conditions">
                 <div class="conditions-content">
                     <h3>Un chat ou un chaton vous plait ?</h3>
-                    <p>Appelez-nous au <b>06 27 56 02 82</b> pour une première prise de contact et discuter ensemble de votre projet d'adoption.</p>
+                    <p>Appelez-nous au <b><a href="tel:{{ $info_asso->telephone }}">{{ $info_asso->telephoneFormatted() }}</a></b> pour une première prise de contact et discuter ensemble de votre projet d'adoption.</p>
                 </div>
 
                 <div class="conditions-content">
                     <h3>Nos tarifs d'adoption</h3>
                     <table class="table">
-                        <tr>
-                            <td>Chat identifié et déparasité (puces, vers et tiques)</td>
-                            <td class="text-end">95€</td>
-                        </tr>
-                        <tr>
-                            <td>Chat identifié, déparasité (puces, vers et tiques) et primo-vaccin</td>
-                            <td class="text-end">125€</td>
-                        </tr>
-                        <tr>
-                            <td>Chat identifié, déparasité (puces vers et tiques) et les deux vaccins</td>
-                            <td class="text-end">165€</td>
-                        </tr>
-                        <tr>
-                            <td>Chat identifié, déparasité (puces vers et tiques), primo-vaccin + stérilisé/castré</td>
-                            <td class="text-end">185€</td>
-                        </tr>
-                        <tr>
-                            <td>Chat identifié, déparasité (puces vers et tiques), deux vaccins et stérilisé/castré</td>
-                            <td class="text-end">225€</td>
-                        </tr>
-                        <tr>
-                            <td>Chat identifié, déparasité (puces vers et tiques), sans les vaccins et stérilisé/castré</td>
-                            <td class="text-end">155€</td>
-                        </tr>
-                        <tr>
-                            <td>Chat Sénior (+ 10 ans)</td>
-                            <td class="text-end">85€</td>
-                        </tr>
-                        <tr>
-                            <td>Tests FIV et FELV</td>
-                            <td class="text-end">+35€</td>
-                        </tr>
+                        @foreach($tarifs as $tarif)
+                            <tr>
+                                <td>{{ $tarif['prestation'] }}</td>
+                                <td class="text-end">{{ $tarif['prix'] }}</td>
+                            </tr>
+                        @endforeach
                     </table>
                     <b>Un chèque de caution 170 euros sera conservé jusqu’à réception du justificatif de stérilisation</b>
                 </div>

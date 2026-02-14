@@ -3,6 +3,7 @@
 namespace App\Filament\Pages;
 
 use App\Settings\AssoSettings;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\SettingsPage;
 use Filament\Schemas\Components\Section;
@@ -50,6 +51,17 @@ class InformationsAsso extends SettingsPage
                             ->required(),
                         TextInput::make('site_dons')
                             ->required(),
+                    ]),
+
+                Section::make('Liste des tarifs')
+                    ->columnSpanFull()
+                    ->schema([
+                        Repeater::make('tarifs')
+                            ->schema([
+                                TextInput::make('prestation')->required(),
+                                TextInput::make('prix')->required(),
+                            ])
+                            ->columns(2),
                     ]),
             ]);
     }
