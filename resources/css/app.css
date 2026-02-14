@@ -1,30 +1,300 @@
-@import '../theme/css/bootstrap.min.css';
-/*@import '../theme/fonts/remixicon.css';*/
-/*@import '../theme/css/swiper-bundle.min.css';
-@import '../theme/fonts/flaticon_mycollection.css';*/
+@import "tailwindcss";
 @import '../theme/css/scrollCue.css';
-@import '../theme/css/navbar.css';
-@import '../theme/css/style.css';
-@import '../theme/css/responsive.css';
 
-/* Animation soulignage h3 section creativity-wrap */
-.creativity-warp .creativity-card h3 {
+@theme {
+    --color-primary: #FF6666;
+    --color-orange: #F98D1F;
+    --color-orange-light: #FFE3A5;
+    --color-pink-light: #FFC0AB;
+    --color-navy: #2C4073;
+    --color-cream: #FCF9F4;
+    --color-peach: #FCEEE8;
+    --color-heading: #050505;
+    --color-body: #777777;
+    --color-burger: #5C2808;
+    --color-copyright: #FFD4C2;
+
+    --font-nunito: "Nunito", sans-serif;
+    --font-mulish: "Mulish", sans-serif;
+    --font-pacifico: "Pacifico", serif;
+}
+
+/* Base styles */
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-mulish);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-body);
+    min-height: 100dvh;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-family: var(--font-nunito);
+    font-weight: 900;
+}
+
+a {
+    color: var(--color-body);
+    transition: all ease 0.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-heading);
+}
+
+p {
+    font-size: 16px;
+    color: var(--color-body);
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Meow logo (Pacifico) */
+.meow-logo {
+    font-family: var(--font-pacifico);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-burger);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Animated CTA button (reproduces .default-btn.style2) */
+.btn-orange-animated {
+    background-color: var(--color-orange);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: 900;
+    color: #ffffff;
+    transition: all ease 0.5s;
+    z-index: 1;
+    padding: 18px 45px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-orange-animated::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 55%;
+    border: solid 1px var(--color-orange);
+    border-radius: 5px;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+.btn-orange-animated::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    border: solid 1px var(--color-orange);
+    border-radius: 5px;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+.btn-orange-animated:hover {
+    color: #ffffff;
+    background-color: var(--color-orange-light);
+}
+
+.btn-orange-animated:hover::before {
+    width: 100%;
+    border-color: var(--color-orange);
+    background-color: var(--color-orange-light);
+}
+
+.btn-orange-animated:hover::after {
+    width: 100%;
+    border-color: var(--color-orange);
+    background-color: var(--color-orange-light);
+}
+
+.btn-orange-animated img {
+    position: relative;
+    left: 4px;
+}
+
+/* Gallery overlay (cat cards) */
+.gallery-widget {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.gallery-widget::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all ease 0.5s;
+    background-image: url(../theme/images/shapes/passion-before.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-widget:hover::after {
+    opacity: 1;
+}
+
+.gallery-widget .gallery-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: all ease 0.5s;
+    top: 50%;
+    transform: translateY(-23px);
+    width: 46px;
+    height: 46px;
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-widget .gallery-icon:hover {
+    background-color: var(--color-orange-light);
+}
+
+.gallery-widget .gallery-icon img {
+    height: 18px;
+}
+
+.gallery-widget:hover .gallery-icon {
+    opacity: 1;
+}
+
+.gallery-widget .gallery2 {
+    border-radius: 30px;
+    width: 100%;
+}
+
+/* Creativity card h3 underline animation */
+.creativity-card {
+    position: relative;
+}
+
+.creativity-card h3 {
     position: relative;
     display: inline-block;
 }
 
-.creativity-warp .creativity-card h3::after {
+.creativity-card h3::after {
     content: '';
     position: absolute;
     bottom: -2px;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #FFC0AB;
+    background-color: var(--color-pink-light);
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
 
-.creativity-warp a:hover .creativity-card h3::after {
+a:hover .creativity-card h3::after {
     width: 110%;
+}
+
+/* Scroll to top button (cat paw) */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: -5px;
+    right: 34px;
+    transition: all ease 0.5s;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 9999;
+    background-image: url(../theme/images/meow/patte-chat.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 142px;
+    width: 35.5px;
+}
+
+#scrollTopBtn:hover {
+    bottom: 10px;
+}
+
+/* Navbar sticky state */
+.navbar-main.sticky {
+    top: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    position: sticky;
+    background-color: #ffffff;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* Responsive overrides */
+@media only screen and (max-width: 991px) {
+    body {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .btn-orange-animated {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
 }

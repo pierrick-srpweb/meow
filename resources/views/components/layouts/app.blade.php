@@ -15,10 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&text=AssociationMeowandCo&display=swap" rel="stylesheet">
 
-    <!-- Links Of CSS File -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Title -->
     <title>{{ ($title ?? '') . ' | ' }}Association Meow and Co</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,12 +33,8 @@
 
     <x-footer></x-footer>
 
-    <!-- Scroll Top Btn -->
-    <div class="top-button-icon">
-        <button id="scrollTopBtn"></button>
-    </div>
+    <button id="scrollTopBtn"></button>
 
-    <script src="{{ asset('build/js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('build/js/scrollCue.min.js') }}" defer></script>
     <script src="{{ asset('build/js/custom.js') }}" defer></script>
 </body>

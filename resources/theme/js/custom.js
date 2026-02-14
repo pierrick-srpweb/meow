@@ -1,26 +1,14 @@
 (function() {
 	"use strict";
 
-    // Navbar JS
-    try {
-        const nav = document.querySelector('.navbar');
-        let navTop = nav.offsetTop;
-
-        function fixedNav() {
-            if (window.scrollY >= navTop) {
-                nav.classList.add('sticky');
-            } else {
-                nav.classList.remove('sticky');
-            }
-        }
-        window.addEventListener('scroll', fixedNav);
-    } catch (err) {}
-
     // Header Sticky Js
     window.addEventListener('scroll', event => {
         const height = 150;
         const { scrollTop } = event.target.scrollingElement;
-        document.querySelector('#navbar').classList.toggle('sticky', scrollTop >= height);
+        const navbar = document.querySelector('#navbar');
+        if (navbar) {
+            navbar.classList.toggle('sticky', scrollTop >= height);
+        }
     });
 
     // Animation Js
@@ -54,18 +42,4 @@
             getPreloaderId.style.display = 'none';
         }
     };
-
-    // Hover JS
-    try {
-        var elements = document.querySelectorAll("[id^='my-element']");
-        elements.forEach(function(element) {
-            element.addEventListener("mouseover", function() {
-                element.classList.add("active");
-            });
-            element.addEventListener("mouseout", function() {
-                element.classList.remove("active");
-            });
-        });
-
-    } catch (err) {}
 })()
