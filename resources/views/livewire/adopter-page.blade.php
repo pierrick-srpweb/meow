@@ -22,35 +22,35 @@
                     <table class="table">
                         <tr>
                             <td>Chat identifié et déparasité (puces, vers et tiques)</td>
-                            <td class="text-end">90€</td>
+                            <td class="text-end">95€</td>
                         </tr>
                         <tr>
                             <td>Chat identifié, déparasité (puces, vers et tiques) et primo-vaccin</td>
-                            <td class="text-end">120€</td>
+                            <td class="text-end">125€</td>
                         </tr>
                         <tr>
                             <td>Chat identifié, déparasité (puces vers et tiques) et les deux vaccins</td>
-                            <td class="text-end">160€</td>
+                            <td class="text-end">165€</td>
                         </tr>
                         <tr>
                             <td>Chat identifié, déparasité (puces vers et tiques), primo-vaccin + stérilisé/castré</td>
-                            <td class="text-end">180€</td>
+                            <td class="text-end">185€</td>
                         </tr>
                         <tr>
                             <td>Chat identifié, déparasité (puces vers et tiques), deux vaccins et stérilisé/castré</td>
-                            <td class="text-end">220€</td>
+                            <td class="text-end">225€</td>
                         </tr>
                         <tr>
                             <td>Chat identifié, déparasité (puces vers et tiques), sans les vaccins et stérilisé/castré</td>
-                            <td class="text-end">150€</td>
+                            <td class="text-end">155€</td>
                         </tr>
                         <tr>
                             <td>Chat Sénior (+ 10 ans)</td>
-                            <td class="text-end">80€</td>
+                            <td class="text-end">85€</td>
                         </tr>
                         <tr>
                             <td>Tests FIV et FELV</td>
-                            <td class="text-end">+30€</td>
+                            <td class="text-end">+35€</td>
                         </tr>
                     </table>
                     <b>Un chèque de caution 170 euros sera conservé jusqu’à réception du justificatif de stérilisation</b>

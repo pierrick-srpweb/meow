@@ -79,11 +79,11 @@
                             </li>
                             <li>
                                 <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="icone coche">
-                                Travailler en collaboration et en relai avec d'autres association de protection animale
+                                Travailler en collaboration et en relai avec d'autres associations de protection animale
                             </li>
                             <li>
                                 <img src="{{ asset('build/images/svgs/about1.svg') }}" alt="icone coche">
-                                Sensibiliser au bien-être animal et à l'importance de la stérilisation auprès des particulier et des collectivités
+                                Sensibiliser au bien-être animal et à l'importance de la stérilisation auprès des particuliers et des collectivités
                             </li>
                         </ul>
                         <p>Tous les chats sont accueillis en famille d'accueil (FA) ce qui permet de leur apprendre la vie en maison et de mieux les connaitre pour vous les présenter</p>
