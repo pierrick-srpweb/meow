@@ -15,7 +15,7 @@ class Temoignage extends Model
         'famille',
     ];
 
-    public function chat()
+    public function chat(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Chat::class);
     }

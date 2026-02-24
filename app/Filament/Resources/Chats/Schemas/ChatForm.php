@@ -67,6 +67,8 @@ class ChatForm
 
                 SpatieMediaLibraryFileUpload::make('cv')
                     ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                    ->maxSize(5120)
                     ->optimize('webp')
                     ->maxImageWidth(1200)
                     ->collection('cv')
@@ -76,6 +78,8 @@ class ChatForm
 
                 SpatieMediaLibraryFileUpload::make('photos')
                     ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                    ->maxSize(5120)
                     ->optimize('webp')
                     ->maxImageWidth(1200)
                     ->multiple()

@@ -38,8 +38,10 @@ class InformationsAsso extends SettingsPage
                     ->columns(2)
                     ->schema([
                         TextInput::make('telephone')
+                            ->tel()
                             ->required(),
                         TextInput::make('email')
+                            ->email()
                             ->required(),
 
                     ]),
@@ -48,8 +50,10 @@ class InformationsAsso extends SettingsPage
                     ->columns(2)
                     ->schema([
                         TextInput::make('facebook')
+                            ->url()
                             ->required(),
                         TextInput::make('site_dons')
+                            ->url()
                             ->required(),
                     ]),
 

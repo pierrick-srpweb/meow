@@ -11,9 +11,13 @@ class ListeChats extends Component
 {
     public string $filtre = 'tous';
 
+    private const array FILTRES_AUTORISES = ['tous', 'Adulte', 'Chaton', 'Senior', 'Adopté', 'Etoile'];
+
     public function filtrer(string $value): void
     {
-        $this->filtre = $value;
+        if (in_array($value, self::FILTRES_AUTORISES, true)) {
+            $this->filtre = $value;
+        }
     }
 
     public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View

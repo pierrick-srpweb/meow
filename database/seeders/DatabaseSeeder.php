@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Pierrick',
             'email' => 'pierrick@srpweb.fr',
+            'is_admin' => true,
         ]);
 
         Chat::factory(20)->create();

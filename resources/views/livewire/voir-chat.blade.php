@@ -30,7 +30,7 @@
                         <div class="events-info">
                             <h3>Son CV</h3>
                             @if($chat->description)
-                                <p>{!! $chat->description !!}</p>
+                                <p>{!! Str::sanitizeHtml($chat->description) !!}</p>
                             @endif
                             <ul class="date-info">
                                 <li>Date de naissance :

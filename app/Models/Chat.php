@@ -13,6 +13,17 @@ class Chat extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
+    protected $hidden = [
+        'famille_accueil',
+        'famille_adoption',
+        'numero_puce',
+        'reservation',
+        'adoption',
+        'vaccination',
+        'antipuce',
+        'vermifuge',
+    ];
+
     protected $fillable = [
         'nom',
         'slug',
@@ -39,6 +50,12 @@ class Chat extends Model implements HasMedia
     {
         return [
             'date_naissance' => 'date',
+            'date_publication' => 'datetime',
+            'vaccination' => 'date',
+            'antipuce' => 'date',
+            'vermifuge' => 'date',
+            'adoption' => 'date',
+            'reservation' => 'date',
             'ok_chien' => 'boolean',
             'ok_enfant' => 'boolean',
             'litiere' => 'boolean',
