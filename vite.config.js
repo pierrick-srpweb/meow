@@ -16,10 +16,6 @@ export default defineConfig({
                     src: 'resources/theme/images',
                     dest: '',
                 },
-                {
-                    src: 'resources/theme/js',
-                    dest: '',
-                },
             ],
         }),
     ],
