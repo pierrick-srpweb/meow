@@ -20,6 +20,19 @@ class AssoSettings extends Settings
 
     public string $site_dons;
 
+    public array $tarifs;
+
+    public function telephoneFormatted(): string
+    {
+        $digits = preg_replace('/\D/', '', $this->telephone);
+
+        if (str_starts_with($digits, '33')) {
+            $digits = '0'.substr($digits, 2);
+        }
+
+        return trim(chunk_split($digits, 2, ' '));
+    }
+
     public static function group(): string
     {
         return 'asso';
