@@ -14,7 +14,7 @@
             </div>
             <picture>
                 <source srcset="{{ asset('build/images/meow/logo-carre.webp') }}" type="image/webp">
-                <img src="{{ asset('build/images/meow/logo-carre.png') }}" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui." width="940" height="788">
+                <img src="{{ asset('build/images/meow/logo-carre.png') }}" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui." width="940" height="788" fetchpriority="high">
             </picture>
         </div>
     </div>
