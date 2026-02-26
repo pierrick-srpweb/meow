@@ -12,7 +12,7 @@
         <div class="container-bs">
             @if($chat->getMedia('cv')->isNotEmpty())
                 <div class="text-center mb-10">
-                    <img class="rounded-[30px] max-w-full" src="{{ $chat->getFirstMediaUrl('cv', 'detail') }}" alt="Photo de {{ $chat->nom }}" width="900" height="900" fetchpriority="high">
+                    <img class="rounded-[30px] max-w-full mx-auto" src="{{ $chat->getFirstMediaUrl('cv', 'detail') }}" alt="Photo de {{ $chat->nom }}" width="900" height="900" fetchpriority="high">
                 </div>
             @endif
 

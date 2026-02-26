@@ -70,22 +70,19 @@ class Chat extends Model implements HasMedia
             ->fit(Fit::Max, 600, 600)
             ->format('webp')
             ->withResponsiveImages()
-            ->performOnCollections('cv')
-            ->queued();
+            ->performOnCollections('cv');
 
         $this
             ->addMediaConversion('detail')
             ->fit(Fit::Max, 900, 900)
             ->format('webp')
-            ->performOnCollections('cv')
-            ->queued();
+            ->performOnCollections('cv');
 
         $this
             ->addMediaConversion('thumbnail')
             ->fit(Fit::Crop, 560, 400)
             ->format('webp')
-            ->performOnCollections('photos')
-            ->queued();
+            ->performOnCollections('photos');
     }
 
     public function registerMediaCollections(): void
