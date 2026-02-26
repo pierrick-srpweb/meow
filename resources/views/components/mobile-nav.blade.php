@@ -12,7 +12,8 @@
          x-transition:leave-start="opacity-50"
          x-transition:leave-end="opacity-0"
          class="fixed inset-0 bg-black/50 z-40"
-         @click="open = false">
+         @click="open = false"
+         aria-hidden="true">
     </div>
 
     {{-- Slide-in panel --}}
@@ -24,7 +25,11 @@
          x-transition:leave-start="translate-x-0"
          x-transition:leave-end="translate-x-full"
          class="fixed top-0 right-0 h-full w-[320px] max-w-[85vw] bg-white z-50 shadow-xl flex flex-col"
-         x-cloak>
+         x-cloak
+         role="dialog"
+         aria-modal="true"
+         aria-label="Menu de navigation"
+         x-effect="if (open) $nextTick(() => $refs.closeBtn.focus())">
 
         {{-- Header --}}
         <div class="flex items-center justify-between p-4 border-b border-gray-200">
@@ -35,13 +40,13 @@
                 </picture>
                 <span class="font-pacifico text-base text-burger text-center leading-none">Association <br> Meow and Co</span>
             </a>
-            <button @click="open = false" class="text-burger hover:text-orange bg-transparent border-none cursor-pointer p-0">
+            <button @click="open = false" x-ref="closeBtn" class="text-burger hover:text-orange bg-transparent border-none cursor-pointer p-0" aria-label="Fermer le menu">
                 @svg('heroicon-m-x-mark', 'w-8 h-8')
             </button>
         </div>
 
         {{-- Links --}}
-        <nav class="flex flex-col gap-6 p-6">
+        <nav class="flex flex-col gap-6 p-6" aria-label="Navigation mobile">
             <a href="{{ route('home') }}"
                class="text-navy font-medium text-[15px] transition-colors hover:text-primary"
                wire:navigate @click="open = false">

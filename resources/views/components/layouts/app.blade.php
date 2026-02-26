@@ -31,6 +31,8 @@
 </head>
 <body class="font-mulish text-base font-normal text-body min-h-dvh">
 
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-orange focus:text-white focus:px-4 focus:py-2 focus:rounded">Aller au contenu principal</a>
+
     <x-navigation></x-navigation>
     <x-mobile-nav></x-mobile-nav>
 
@@ -43,7 +45,8 @@
             x-show="visible"
             x-transition.opacity
             @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            id="scrollTopBtn">
+            id="scrollTopBtn"
+            aria-label="Retour en haut de page">
     </button>
 </body>
 </html>

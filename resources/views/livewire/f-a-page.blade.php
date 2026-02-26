@@ -1,4 +1,4 @@
-<main>
+<main id="main-content">
     {{-- Inner Hero --}}
     <div class="bg-peach pt-[170px] pb-[170px] max-lg:pt-[60px] max-lg:pb-[70px] relative">
         <div class="container-bs">

@@ -1,4 +1,4 @@
-<nav class="navbar-main relative z-[4] py-3.5 max-lg:py-2.5" id="navbar"
+<nav class="navbar-main relative z-[4] py-3.5 max-lg:py-2.5" id="navbar" aria-label="Navigation principale"
      x-data="{ sticky: false }"
      @scroll.window="sticky = window.scrollY >= 150"
      :class="{ 'sticky': sticky }">
@@ -12,7 +12,7 @@
         </a>
 
         {{-- Burger menu (mobile) --}}
-        <button class="lg:hidden border-none p-0 cursor-pointer" @click="$dispatch('toggle-mobile-menu')">
+        <button class="lg:hidden border-none p-0 cursor-pointer" @click="$dispatch('toggle-mobile-menu')" aria-label="Ouvrir le menu">
             <span class="flex flex-col gap-[5px]">
                 <span class="block h-[3px] w-[30px] bg-burger"></span>
                 <span class="block h-[3px] w-[30px] bg-burger"></span>
@@ -54,7 +54,7 @@
 
         <a href="{{ route('adopter') }}" class="hidden lg:inline-flex btn-orange-animated" wire:navigate data-pan="adopter">
             <span>Adopter un chat</span>
-            <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="bouton flèche droite">
+            <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="" aria-hidden="true">
         </a>
     </div>
 </nav>
