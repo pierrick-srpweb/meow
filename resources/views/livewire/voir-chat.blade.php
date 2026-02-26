@@ -65,9 +65,7 @@
                                         src="{{ $photo->getUrl('thumbnail') }}"
                                         alt="Photo de {{ $chat->nom }}"
                                         loading="lazy"
-                                        width="560"
-                                        height="400"
-                                        class="w-full h-[200px] object-cover rounded-lg shadow-sm cursor-pointer">
+                                        class="w-full aspect-7/5 object-cover rounded-lg shadow-sm cursor-pointer">
                                 </a>
                             </div>
                         @endforeach
