@@ -1,3 +1,5 @@
+let lightboxInstance = null;
+
 function initGallery() {
     const galleryElement = document.getElementById('gallery-chat');
 
@@ -5,17 +7,22 @@ function initGallery() {
         return;
     }
 
+    if (lightboxInstance) {
+        lightboxInstance.destroy();
+        lightboxInstance = null;
+    }
+
     import('photoswipe/lightbox').then(({ default: PhotoSwipeLightbox }) => {
         import('photoswipe/style.css');
 
-        const lightbox = new PhotoSwipeLightbox({
+        lightboxInstance = new PhotoSwipeLightbox({
             gallery: '#gallery-chat',
             children: 'a',
             showHideAnimationType: 'fade',
             pswpModule: () => import('photoswipe')
         });
 
-        lightbox.init();
+        lightboxInstance.init();
     });
 }
 
