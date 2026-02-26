@@ -14,45 +14,45 @@
             </div>
             <picture>
                 <source srcset="{{ asset('build/images/meow/logo-carre.webp') }}" type="image/webp">
-                <img src="{{ asset('build/images/meow/logo-carre.png') }}" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui.">
+                <img src="{{ asset('build/images/meow/logo-carre.png') }}" alt="logo de l'association meow and co representant un chat roux assis avec des étoiles qui brillent autour de lui." width="940" height="788">
             </picture>
         </div>
     </div>
 
     {{-- About --}}
     <div class="bg-cream py-[100px] pb-[150px] max-lg:py-[60px] max-lg:pb-[60px] relative">
-        <div class="max-w-[1140px] mx-auto px-4">
+        <div class="container-bs">
             <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
                 <div>
                     <div class="grid grid-cols-12 items-center gap-4">
                         <div class="col-span-12 lg:col-span-7">
                             @if($photo_principale)
-                                <img src="{{ asset('storage/' . $photo_principale) }}" alt="Photo principale de l'association" class="rounded-lg" loading="lazy">
+                                <img src="{{ asset('storage/' . $photo_principale) }}" alt="Photo principale de l'association" class="rounded-lg" loading="lazy" width="991" height="1504">
                             @else
                                 <picture>
                                     <source srcset="{{ asset('build/images/meow/luna-1.webp') }}" type="image/webp">
-                                    <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite." class="rounded-lg" loading="lazy">
+                                    <img src="{{ asset('build/images/meow/luna-1.jpg') }}" alt="photo d'un chat gris et marron assis sur un arbre à chat. Il regarde vers la droite." class="rounded-lg" loading="lazy" width="991" height="1504">
                                 </picture>
                             @endif
                         </div>
-                        <div class="col-span-12 lg:col-span-5 flex flex-col gap-6 max-lg:hidden">
+                        <div class="col-span-12 lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6">
                             <div>
                                 @if($photo_secondaire_1)
-                                    <img src="{{ asset('storage/' . $photo_secondaire_1) }}" alt="Photo secondaire 1 de l'association" class="rounded-lg" loading="lazy">
+                                    <img src="{{ asset('storage/' . $photo_secondaire_1) }}" alt="Photo secondaire 1 de l'association" class="rounded-lg" loading="lazy" width="1280" height="1068">
                                 @else
                                     <picture>
                                         <source srcset="{{ asset('build/images/meow/chaton-1.webp') }}" type="image/webp">
-                                        <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant." class="rounded-lg" loading="lazy">
+                                        <img src="{{ asset('build/images/meow/chaton-1.jpg') }}" alt="photo d'un chaton noir et blanc alongé sur un coussin et qui tend ses pattes avant." class="rounded-lg" loading="lazy" width="1280" height="1068">
                                     </picture>
                                 @endif
                             </div>
                             <div>
                                 @if($photo_secondaire_2)
-                                    <img src="{{ asset('storage/' . $photo_secondaire_2) }}" alt="Photo secondaire 2 de l'association" class="rounded-lg" loading="lazy">
+                                    <img src="{{ asset('storage/' . $photo_secondaire_2) }}" alt="Photo secondaire 2 de l'association" class="rounded-lg" loading="lazy" width="1600" height="1204">
                                 @else
                                     <picture>
                                         <source srcset="{{ asset('build/images/meow/chaton-2.webp') }}" type="image/webp">
-                                        <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite." class="rounded-lg" loading="lazy">
+                                        <img src="{{ asset('build/images/meow/chaton-2.jpg') }}" alt="photo d'un chaton blanc alongé sur un arbre à chat. Il regarde vers la droite." class="rounded-lg" loading="lazy" width="1600" height="1204">
                                     </picture>
                                 @endif
                             </div>
@@ -91,7 +91,7 @@
 
     {{-- Cards "Nous aider" --}}
     <div class="relative text-center pt-[100px] pb-[45px] max-lg:pt-[60px] max-lg:pb-0">
-        <div class="max-w-[1140px] mx-auto px-4">
+        <div class="container-bs">
             <div class="text-center mb-[35px] max-w-[680px] mx-auto max-lg:mb-5">
                 <span class="block font-semibold text-base text-primary mb-3 max-lg:text-[15px] max-lg:mb-2.5">
                     Nous aider
@@ -102,7 +102,7 @@
                 {{-- Card 1: Faire un don --}}
                 <a href="{{ $site_dons }}" target="_blank" rel="noreferrer noopener" data-pan="don">
                     <div class="creativity-card mb-[35px] px-5 py-4 max-lg:mb-5 max-lg:px-5 max-lg:py-0">
-                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-primary flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-primary">
+                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-pink-light flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-pink-light">
                             {{ svg('heroicon-s-currency-euro', 'w-10 h-10 max-lg:w-7 max-lg:h-7') }}
                         </div>
                         <h3 class="text-[22px] mb-5 max-lg:text-lg max-lg:mb-3">
@@ -119,7 +119,7 @@
                 {{-- Card 3: Adopter --}}
                 <a href="{{ route('adopter') }}" wire:navigate data-pan="adopter">
                     <div class="creativity-card mb-[35px] px-5 py-4 max-lg:mb-5 max-lg:px-5 max-lg:py-0">
-                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-primary flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-primary">
+                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-pink-light flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-pink-light">
                             {{ svg('heroicon-s-heart', 'w-10 h-10 max-lg:w-7 max-lg:h-7') }}
                         </div>
                         <h3 class="text-[22px] mb-5 max-lg:text-lg max-lg:mb-3">
@@ -132,7 +132,7 @@
                 {{-- Card 4: Relayer nos actions --}}
                 <a href="{{ $facebook }}" target="_blank" rel="noreferrer noopener" data-pan="facebook">
                     <div class="creativity-card mb-[35px] px-5 py-4 max-lg:mb-5 max-lg:px-5 max-lg:py-0">
-                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-primary flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-primary">
+                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-pink-light flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-pink-light">
                             {{ svg('heroicon-s-share', 'w-10 h-10 max-lg:w-7 max-lg:h-7') }}
                         </div>
                         <h3 class="text-[22px] mb-5 max-lg:text-lg max-lg:mb-3">
@@ -149,7 +149,7 @@
                 {{-- Card 5: Devenir FA --}}
                 <a href="{{ route('famille-accueil') }}" wire:navigate data-pan="fa">
                     <div class="creativity-card mb-[35px] px-5 py-4 max-lg:mb-5 max-lg:px-5 max-lg:py-0">
-                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-primary flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-primary">
+                        <div class="w-[100px] h-[100px] max-lg:w-[70px] max-lg:h-[70px] rounded-full border-2 border-dashed border-pink-light flex items-center justify-center mx-auto mb-6 max-lg:mb-3 text-pink-light">
                             {{ svg('heroicon-s-building-office', 'w-10 h-10 max-lg:w-7 max-lg:h-7') }}
                         </div>
                         <h3 class="text-[22px] mb-5 max-lg:text-lg max-lg:mb-3">
@@ -162,7 +162,7 @@
         </div>
         <picture>
             <source srcset="{{ asset('build/images/meow/don.webp') }}" type="image/webp">
-            <img src="{{ asset('build/images/meow/don.jpg') }}" loading="lazy" class="mx-auto max-lg:w-[300px] max-lg:relative max-lg:bottom-0 lg:absolute lg:bottom-[140px] lg:left-0 lg:right-0" alt="illustration d'un chat roux assis qui lève une patte et plisse les yeux avec un sourire. Sur une pancarte à sa droite on peut lire Merci du fond du coeur pour votre don !" width="600">
+            <img src="{{ asset('build/images/meow/don.jpg') }}" loading="lazy" class="mx-auto max-lg:w-[300px] max-lg:relative max-lg:bottom-0 lg:absolute lg:bottom-[140px] lg:left-0 lg:right-0" alt="illustration d'un chat roux assis qui lève une patte et plisse les yeux avec un sourire. Sur une pancarte à sa droite on peut lire Merci du fond du coeur pour votre don !" width="600" height="503">
         </picture>
     </div>
 </main>

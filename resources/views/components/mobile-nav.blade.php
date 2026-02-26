@@ -31,9 +31,9 @@
             <a href="{{ route('home') }}" class="flex items-center" wire:navigate @click="open = false">
                 <picture>
                     <source srcset="{{ asset('build/images/meow/meow.webp') }}" type="image/webp">
-                    <img src="{{ asset('build/images/meow/meow.png') }}" alt="logo chat assis" width="60">
+                    <img src="{{ asset('build/images/meow/meow.png') }}" alt="logo chat assis" width="60" height="60">
                 </picture>
-                <span class="meow-logo text-base leading-none">Association <br> Meow and Co</span>
+                <span class="font-pacifico text-base text-burger text-center leading-none">Association <br> Meow and Co</span>
             </a>
             <button @click="open = false" class="text-burger hover:text-orange bg-transparent border-none cursor-pointer p-0">
                 @svg('heroicon-m-x-mark', 'w-8 h-8')
