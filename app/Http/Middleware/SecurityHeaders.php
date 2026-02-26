@@ -18,7 +18,11 @@ class SecurityHeaders
         $response->headers->set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
 
         if ($request->secure()) {
-            $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+            $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+        }
+
+        if ($request->isMethod('GET') && ! $request->is('admin*') && ! $request->ajax()) {
+            $response->headers->set('Cache-Control', 'public, max-age=300, s-maxage=600');
         }
 
         return $response;

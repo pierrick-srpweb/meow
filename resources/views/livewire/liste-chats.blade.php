@@ -1,55 +1,60 @@
 <main>
-    <!-- Inner Hero Warp Start -->
-    <div class="inner-hero-warp">
-        <div class="container">
-            <div class="inner-hero-content">
-                <h1>Les chats et chatons à adopter</h1>
+    {{-- Inner Hero --}}
+    <div class="bg-peach pt-[170px] pb-[170px] max-lg:pt-[60px] max-lg:pb-[70px] relative">
+        <div class="container-bs">
+            <div class="text-center">
+                <h1 class="text-[48px] mb-2.5 max-lg:text-[30px] max-lg:mb-0">Les chats et chatons à adopter</h1>
             </div>
         </div>
     </div>
-    <!-- Inner Hero Warp End -->
 
-    <!-- Childhood Warp Start -->
-    <div class="passion-warp pt-100 pb-75">
-        <div class="container">
-            <div class="childhood-tab passion-tab">
-                <ul class="nav nav-pills mb-3" id="pills-tab1" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'tous'])  type="button" wire:click="filtrer(`tous`)">A adopter</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'Adulte']) type="button" wire:click="filtrer(`Adulte`)">Adultes</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'Chaton']) type="button" wire:click="filtrer(`Chaton`)">Chatons</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'Senior']) type="button" wire:click="filtrer(`Senior`)">Senior</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'Adopté']) type="button" wire:click="filtrer(`Adopté`)">Les adoptés</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button @class(['nav-link', 'active' => $filtre === 'Etoile']) type="button" wire:click="filtrer(`Etoile`)">Les étoiles</button>
-                    </li>
-                </ul>
+    {{-- Filters + Grid --}}
+    <div class="pt-[100px] pb-[75px] max-lg:pt-[60px] max-lg:pb-[35px]">
+        <div class="container-bs">
+            <div class="flex lg:flex-nowrap flex-wrap justify-center mb-[30px]">
+                <button @class([
+                    'filter-tab-btn w-[150px] h-[80px] max-sm:w-[100px] max-md:w-[115px] mr-10 max-lg:mr-[25px] max-lg:mb-5 font-nunito font-bold text-xl max-md:text-base text-navy text-center cursor-pointer transition-all duration-500',
+                    'active' => $filtre === 'tous',
+                ]) type="button" wire:click="filtrer(`tous`)">A adopter</button>
 
+                <button @class([
+                    'filter-tab-btn w-[150px] h-[80px] max-sm:w-[100px] max-md:w-[115px] mr-10 max-lg:mr-[25px] max-lg:mb-5 font-nunito font-bold text-xl max-md:text-base text-navy text-center cursor-pointer transition-all duration-500',
+                    'active' => $filtre === 'Adulte',
+                ]) type="button" wire:click="filtrer(`Adulte`)">Adultes</button>
 
+                <button @class([
+                    'filter-tab-btn w-[150px] h-[80px] max-sm:w-[100px] max-md:w-[115px] mr-10 max-lg:mr-[25px] max-lg:mb-5 font-nunito font-bold text-xl max-md:text-base text-navy text-center cursor-pointer transition-all duration-500',
+                    'active' => $filtre === 'Chaton',
+                ]) type="button" wire:click="filtrer(`Chaton`)">Chatons</button>
 
-                <div class="row justify-content-center" id="container2">
-                    @foreach($chats as $chat)
-                        <div class="col-lg-3 item2 col-sm-6" wire:key="{{ $chat->id }}">
-                            <div class="gallery-widget">
-                                <img src="{{ $chat->getFirstMedia('cv')->getUrl('preview') ?? asset('build/images/abouts/style3-about3.png') }}" class="gallery2" alt="image" @if(!$loop->first) loading="lazy" @endif>
-                                <a href="{{ route('voir-chat', $chat->slug) }}" class="gallery-icon" data-pan="{{ $chat->slug }}">
-                                    <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
-                                </a>
-                            </div>
+                <button @class([
+                    'filter-tab-btn w-[150px] h-[80px] max-sm:w-[100px] max-md:w-[115px] mr-10 max-lg:mr-[25px] max-lg:mb-5 font-nunito font-bold text-xl max-md:text-base text-navy text-center cursor-pointer transition-all duration-500',
+                    'active' => $filtre === 'Senior',
+                ]) type="button" wire:click="filtrer(`Senior`)">Senior</button>
+
+                <button @class([
+                    'filter-tab-btn w-[150px] h-[80px] max-sm:w-[100px] max-md:w-[115px] mr-10 max-lg:mr-[25px] max-lg:mb-5 font-nunito font-bold text-xl max-md:text-base text-navy text-center cursor-pointer transition-all duration-500',
+                    'active' => $filtre === 'Adopté',
+                ]) type="button" wire:click="filtrer(`Adopté`)">Les adoptés</button>
+
+                <button @class([
+                    'filter-tab-btn w-[150px] h-[80px] max-sm:w-[100px] max-md:w-[115px] mr-10 max-lg:mr-[25px] max-lg:mb-5 font-nunito font-bold text-xl max-md:text-base text-navy text-center cursor-pointer transition-all duration-500',
+                    'active' => $filtre === 'Etoile',
+                ]) type="button" wire:click="filtrer(`Etoile`)">Les étoiles</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                @foreach($chats as $chat)
+                    <div wire:key="{{ $chat->id }}">
+                        <div class="gallery-widget mb-6">
+                            <img src="{{ $chat->getFirstMedia('cv')?->getUrl('card') ?? asset('build/images/abouts/style3-about3.png') }}" class="gallery2" alt="Photo de {{ $chat->nom }}" width="600" height="600" @if($loop->first) fetchpriority="high" @else loading="lazy" @endif>
+                            <a href="{{ route('voir-chat', $chat->slug) }}" class="gallery-icon" data-pan="{{ $chat->slug }}">
+                                <img src="{{ asset('build/images/svgs/button-white.svg') }}" alt="image">
+                            </a>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
-    <!-- Childhood Warp End -->
 </main>

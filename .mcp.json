@@ -1,0 +1,24 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "php",
+            "args": [
+                "artisan",
+                "boost:mcp"
+            ]
+        },
+        "herd": {
+            "command": "php",
+            "args": [
+                "C:/Users/Ankh/.config/herd/bin/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "C:\\Users\\Ankh\\Qsync\\Dev\\herd\\meow"
+            }
+        },
+        "nightwatch": {
+            "type": "http",
+            "url": "https://nightwatch.laravel.com/mcp"
+        }
+    }
+}

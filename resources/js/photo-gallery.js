@@ -1,11 +1,13 @@
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
-
-// Initialiser PhotoSwipe pour toutes les galeries
-document.addEventListener('DOMContentLoaded', () => {
+function initGallery() {
     const galleryElement = document.getElementById('gallery-chat');
 
-    if (galleryElement) {
+    if (!galleryElement) {
+        return;
+    }
+
+    import('photoswipe/lightbox').then(({ default: PhotoSwipeLightbox }) => {
+        import('photoswipe/style.css');
+
         const lightbox = new PhotoSwipeLightbox({
             gallery: '#gallery-chat',
             children: 'a',
@@ -14,5 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         lightbox.init();
-    }
-});
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initGallery);
+document.addEventListener('livewire:navigated', initGallery);

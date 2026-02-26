@@ -66,18 +66,37 @@ class Chat extends Model implements HasMedia
     public function registerMediaConversions(?Media $media = null): void
     {
         $this
-            ->addMediaConversion('preview')
-            ->fit(Fit::Contain, 400, 400)
-            ->nonQueued();
+            ->addMediaConversion('card')
+            ->fit(Fit::Max, 600, 600)
+            ->format('webp')
+            ->withResponsiveImages()
+            ->performOnCollections('cv')
+            ->queued();
+
+        $this
+            ->addMediaConversion('detail')
+            ->fit(Fit::Max, 900, 900)
+            ->format('webp')
+            ->performOnCollections('cv')
+            ->queued();
+
+        $this
+            ->addMediaConversion('thumbnail')
+            ->fit(Fit::Crop, 560, 400)
+            ->format('webp')
+            ->performOnCollections('photos')
+            ->queued();
     }
 
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('cv')
             ->useDisk('public')
-            ->singleFile();
+            ->singleFile()
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
 
         $this->addMediaCollection('photos')
-            ->useDisk('public');
+            ->useDisk('public')
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
     }
 }

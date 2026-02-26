@@ -11,9 +11,11 @@ class AdopterPage extends Component
 {
     public function render(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
     {
+        $assoSettings = app(AssoSettings::class);
+
         return view('livewire.adopter-page', [
-            'info_asso' => app(AssoSettings::class),
-            'tarifs' => app(AssoSettings::class)->tarifs,
+            'info_asso' => $assoSettings,
+            'tarifs' => $assoSettings->tarifs,
         ]);
     }
 }

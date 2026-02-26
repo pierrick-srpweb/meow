@@ -27,7 +27,7 @@ class AssoSettings extends Settings
         $digits = preg_replace('/\D/', '', $this->telephone);
 
         if (str_starts_with($digits, '33')) {
-            $digits = '0' . substr($digits, 2);
+            $digits = '0'.substr($digits, 2);
         }
 
         return trim(chunk_split($digits, 2, ' '));
