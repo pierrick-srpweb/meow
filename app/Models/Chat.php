@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -11,7 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Chat extends Model implements HasMedia
 {
-    use HasFactory, InteractsWithMedia;
+    use HasFactory, InteractsWithMedia, LogsActivity;
 
     protected $hidden = [
         'famille_accueil',
@@ -83,6 +85,14 @@ class Chat extends Model implements HasMedia
             ->fit(Fit::Crop, 560, 400)
             ->format('webp')
             ->performOnCollections('photos');
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logAll()
+            ->logOnlyDirty()
+            ->setDescriptionForEvent(fn (string $eventName): string => "Chat \"{$this->nom}\" a été {$eventName}");
     }
 
     public function registerMediaCollections(): void

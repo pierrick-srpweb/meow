@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Concerns\LogsSettingsActivity;
 use App\Settings\PageSettings;
 use Filament\Forms\Components\FileUpload;
 use Filament\Pages\SettingsPage;
@@ -11,6 +12,8 @@ use Filament\Schemas\Schema;
 
 class AccueilPage extends SettingsPage
 {
+    use LogsSettingsActivity;
+
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-home';
 
     protected static string|\UnitEnum|null $navigationGroup = 'Page';
@@ -18,6 +21,11 @@ class AccueilPage extends SettingsPage
     protected static ?string $navigationLabel = 'Accueil';
 
     protected static string $settings = PageSettings::class;
+
+    protected function getActivityDescription(): string
+    {
+        return 'Page d\'accueil modifiée';
+    }
 
     #[\Override]
     public function form(Schema $schema): Schema
@@ -31,6 +39,7 @@ class AccueilPage extends SettingsPage
                             ->image()
                             ->optimize('webp')
                             ->maxImageWidth(1200)
+                            ->disk('public')
                             ->directory('association')
                             ->visibility('public')
                             ->moveFiles()
@@ -44,6 +53,7 @@ class AccueilPage extends SettingsPage
                                     ->image()
                                     ->optimize('webp')
                                     ->maxImageWidth(1200)
+                                    ->disk('public')
                                     ->directory('association')
                                     ->visibility('public')
                                     ->moveFiles()
@@ -55,6 +65,7 @@ class AccueilPage extends SettingsPage
                                     ->image()
                                     ->optimize('webp')
                                     ->maxImageWidth(1200)
+                                    ->disk('public')
                                     ->directory('association')
                                     ->visibility('public')
                                     ->moveFiles()

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Concerns\LogsSettingsActivity;
 use App\Settings\AssoSettings;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
@@ -11,9 +12,16 @@ use Filament\Schemas\Schema;
 
 class InformationsAsso extends SettingsPage
 {
+    use LogsSettingsActivity;
+
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = AssoSettings::class;
+
+    protected function getActivityDescription(): string
+    {
+        return 'Informations de l\'association modifiées';
+    }
 
     #[\Override]
     public function form(Schema $schema): Schema

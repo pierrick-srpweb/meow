@@ -2,34 +2,32 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Enums\Role;
 use Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, LogsActivity, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
      * @var list<string>
      */
     protected $fillable = [
         'name',
         'email',
         'password',
-        'is_admin',
+        'role',
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
      * @var list<string>
      */
     protected $hidden = [
@@ -37,22 +35,45 @@ class User extends Authenticatable implements FilamentUser
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'is_admin' => 'boolean',
+            'role' => Role::class,
         ];
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logOnly(['name', 'email', 'role'])
+            ->logOnlyDirty()
+            ->setDescriptionForEvent(fn (string $eventName): string => "Utilisateur \"{$this->name}\" a été {$eventName}");
     }
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->is_admin;
+        return true;
+    }
+
+    public function isDeveloppeur(): bool
+    {
+        return $this->role === Role::Developpeur;
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === Role::Admin;
+    }
+
+    public function isEditeur(): bool
+    {
+        return $this->role === Role::Editeur;
+    }
+
+    public function isAdminOrDeveloppeur(): bool
+    {
+        return $this->isAdmin() || $this->isDeveloppeur();
     }
 }
